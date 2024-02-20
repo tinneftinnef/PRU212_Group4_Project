@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BASIC ATTACK_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 3
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4913081f5a18dbd46969e42235002f1a
+      internalID: 1729060268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASIC ATTACK_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 3
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146f15ab6979ac9429c1e3c3fffdca5b
+      internalID: 246582102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASIC ATTACK_2
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 3
+        width: 48
+        height: 54
+      alignment: 9
+      pivot: {x: 0.36287943, y: 0.32525197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5acefdb87129749bbc264fe388639c
+      internalID: -195259558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASIC ATTACK_3
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3
+        width: 44
+        height: 44
+      alignment: 9
+      pivot: {x: 0.29932544, y: 0.4047527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d663aea24d83f499b1e0e7fb80b9ab
+      internalID: -355768897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASIC ATTACK_4
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 3
+        width: 38
+        height: 32
+      alignment: 9
+      pivot: {x: 0.35461265, y: 0.5512624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8ec695deb5b874797601bc0863a264
+      internalID: 1479157429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +224,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BASIC ATTACK_0: 1729060268
+      BASIC ATTACK_1: 246582102
+      BASIC ATTACK_2: -195259558
+      BASIC ATTACK_3: -355768897
+      BASIC ATTACK_4: 1479157429
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
