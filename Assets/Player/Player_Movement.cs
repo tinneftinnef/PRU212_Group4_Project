@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
     [Header("Movement")]
-    [SerializeField] bool canMove;
+    [SerializeField] internal bool canMove;
     [SerializeField] float speed;
     [SerializeField] float currentMovement;
     [SerializeField] bool isFacingRight;
@@ -18,6 +18,14 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] float jumpPower;
     [SerializeField] float jumpTime;
     [SerializeField] float jumpTimeCounter;
+    [SerializeField] internal int jumpRemaining;
+    [SerializeField] internal int jumpCheck;
+    [SerializeField] int maxJump = 1;
+    [SerializeField] float maxFallSpeed = 15f;
+    [SerializeField] Shuriken_Scripts Shuriken_Scripts;
+    [Header("UseAbility")]
+    [SerializeField] internal bool isCanUseQ;
+    [SerializeField] internal bool isCanUseChargeL;
     void Start()
     {
         speed = 10f;
@@ -36,6 +44,14 @@ public class Player_Movement : MonoBehaviour
         Jump();
         Flip();
         animator.SetBool("IsGround", IsGrounded());
+        BasicAttack();
+    }
+    private void FixedUpdate()
+    {
+        if (rb.velocity.y < -maxFallSpeed)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -maxFallSpeed);
+        }
     }
     protected void Running()
     {
@@ -63,7 +79,7 @@ public class Player_Movement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-    protected bool IsGrounded()
+    internal bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
     }
@@ -82,35 +98,73 @@ public class Player_Movement : MonoBehaviour
             {
                 animator.SetBool("IsFall", true);
             }
-            else if (IsGrounded() == true)
-            {
-                animator.SetBool("IsFall", false);
-                animator.SetBool("IsJump", false);
-            }
         }
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && IsGrounded())
+        if (IsGrounded() == true)
         {
-            canJump = true;
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-            rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-            jumpTimeCounter = jumpTime;
+            animator.SetBool("IsFall", false);
+            animator.SetBool("IsJump", false);
+            jumpRemaining = maxJump;
+            jumpCheck = maxJump;
         }
-        if ((Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && canJump == true)
+        if (jumpRemaining > 0)
         {
-            if (jumpTimeCounter > 0)
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)))
             {
+                canJump = true;
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-                jumpTimeCounter -= Time.deltaTime;
+                jumpTimeCounter = jumpTime;
+                jumpCheck--;
+
             }
-            else
+            if ((Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && canJump == true)
             {
-                canJump = false;
+                if (jumpRemaining >= 0)
+                {
+                    if (jumpTimeCounter > 0)
+                    {
+                        rb.velocity = new Vector2(rb.velocity.x, 0);
+                        rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+                        jumpTimeCounter -= Time.deltaTime;
+                    }
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                if (jumpRemaining <= 0)
+                {
+                    canJump = false;
+                }
+                else
+                {
+                    jumpTimeCounter = jumpTime;
+                    jumpRemaining--;
+                }
             }
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+    }
+    protected void BasicAttack()
+    {
+        if (IsGrounded())
         {
-            canJump = false;
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                animator.SetTrigger("BasicAttack");
+            }
         }
+    }
+    protected void Release()
+    {
+        StartCoroutine(ReleaseMultipleTimes(3, 0.09f));
+    }
+    IEnumerator ReleaseMultipleTimes(int times, float interval)
+    {
+        for (int i = 0; i < times; i++)
+        {
+            Shuriken_Scripts.ReleaseSkill();
+            canMove = false;
+            yield return new WaitForSeconds(interval);
+        }
+        canMove = true;
     }
 }
