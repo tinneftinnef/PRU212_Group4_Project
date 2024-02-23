@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1696299031082126216}
   m_Layer: 0
   m_Name: SkillEffect
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,3 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shurikenSpeed: 25
   rb: {fileID: 173818376978150799}
+  shurikenDamage: 0
+  skillShurikenDamage: 0
+  chargeFlameDamage: 0
