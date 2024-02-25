@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
@@ -12,10 +13,15 @@ public class Stats_Interact : MonoBehaviour
     public GameObject plusEPButton;
     public GameObject closeButton;
     public bool playerIsClose;
+    public GameObject dropdownKButton;
+    public GameObject[] KSkillList;
     [SerializeField] Player_Information player_Information;
+    int previous = 0;
+    int next = 0;
+    int actived = 1;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -68,4 +74,30 @@ public class Stats_Interact : MonoBehaviour
             playerIsClose = false;
         }
     }
+    public void SelectedSkillK()
+    {
+        if (player_Information.isCanUseSkillK)
+        {
+            next++;
+            if (next >= 0 && next <= KSkillList.Length - 1)
+            {
+                previous = next - 1;
+                KSkillList[next].SetActive(true); 
+                player_Information.listKSkill[next].SetActive(true);
+                KSkillList[previous].SetActive(false);
+                player_Information.listKSkill[previous].SetActive(false);
+            }
+            if (next > KSkillList.Length - 1)
+            {
+                previous = next - 1;
+                next = actived;
+                KSkillList[next].SetActive(true);
+                KSkillList[previous].SetActive(false);
+                player_Information.listKSkill[next].SetActive(true);
+                player_Information.listKSkill[previous].SetActive(false);
+            }
+            
+        }
+    }
 }
+

@@ -9,14 +9,20 @@ public class Shuriken_Information : MonoBehaviour
     [SerializeField] float shurikenDamage;
     [SerializeField] float skillShurikenDamage;
     [SerializeField] float chargeFlameDamage;
-    [SerializeField] EnemyTestTakeHit takeHit;
+    [SerializeField] float skillFlameShurikenDamage;
+    Audio_Manager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<Audio_Manager>();
+    }
     void Start()
     {
         shurikenSpeed = 25f;
         shurikenDamage = 10f;
         skillShurikenDamage = 40f;
+        skillFlameShurikenDamage = 60f;
         chargeFlameDamage = 30f;
-        takeHit = GameObject.FindWithTag("Enemy").GetComponent<EnemyTestTakeHit>();
     }
 
     // Update is called once per frame
@@ -32,18 +38,37 @@ public class Shuriken_Information : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            if(gameObject.tag == "Shuriken")
+
+            if (gameObject.tag == "Shuriken")
             {
-                takeHit.TakeDamage(shurikenDamage);
+                collision.gameObject.GetComponent<EnemyTestTakeHit>().TakeDamage(shurikenDamage);
             }
-            if(gameObject.tag == "Skill")
+            if (gameObject.tag == "Skill")
             {
-                takeHit.TakeDamage(skillShurikenDamage);
+                collision.gameObject.GetComponent<EnemyTestTakeHit>().TakeDamage(skillShurikenDamage);
             }
-            if(gameObject.tag == "Charge")
+            if (gameObject.tag == "Charge")
             {
-                takeHit.TakeDamage(chargeFlameDamage);
+                collision.gameObject.GetComponent<EnemyTestTakeHit>().TakeDamage(chargeFlameDamage);
             }
+            if (gameObject.tag == "SkillFlame")
+            {
+                collision.gameObject.GetComponent<EnemyTestTakeHit>().TakeDamage(skillFlameShurikenDamage);
+            }
+            int randomNumber = UnityEngine.Random.Range(1, 3);
+            switch (randomNumber)
+            {
+                case 1:
+                    audioManager.PlaySFX(audioManager.slashHitted1);
+                    break;
+                case 2:
+                    audioManager.PlaySFX(audioManager.slashHitted2);
+                    break;
+                case 3:
+                    audioManager.PlaySFX(audioManager.slashHitted3);
+                    break;
+            }
+            gameObject.SetActive(false);
         }
     }
 }

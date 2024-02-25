@@ -8,7 +8,6 @@ public class EnemyTestTakeHit : MonoBehaviour
     [SerializeField] float currentHealth;
     [SerializeField] float maxHealth;
     [SerializeField] Animator animator;
-    [SerializeField] Collider2D colliderSke;
     protected Rigidbody2D rb;
     private float deadTime;
     private bool isdead;
@@ -35,7 +34,6 @@ public class EnemyTestTakeHit : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        Collider2D[] childColliders = GetComponentsInChildren<Collider2D>();
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
         if (currentHealth <= 0)

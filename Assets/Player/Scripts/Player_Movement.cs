@@ -26,6 +26,7 @@ public class Player_Movement : MonoBehaviour
     [Header("UseAbility")]
     [SerializeField] internal bool isCanUseQ;
     [SerializeField] internal bool isCanUseChargeL;
+    [SerializeField] int selectedSkill;
     [SerializeField] GameObject MemoryForm;
     [Header("DealDamgeToEnemy")]
     [SerializeField] EnemyTestTakeHit takeHit;
@@ -38,6 +39,8 @@ public class Player_Movement : MonoBehaviour
 
     void Start()
     {
+        isCanUseQ = true;
+        selectedSkill = 0;
         speed = 10f;
         jumpPower = 10f;
         jumpTime = 0.3f;
@@ -193,7 +196,16 @@ public class Player_Movement : MonoBehaviour
     {
         for (int i = 0; i < times; i++)
         {
-            Shuriken_Scripts.ReleaseSkill();
+            switch (selectedSkill)
+            {
+                case 1:
+                    Shuriken_Scripts.ReleaseSkill();
+                    break;
+                case 2:
+                    Shuriken_Scripts.ReleaseSkillFlame();
+                    break;
+            }
+            
             canMove = false;
             yield return new WaitForSeconds(interval);
         }

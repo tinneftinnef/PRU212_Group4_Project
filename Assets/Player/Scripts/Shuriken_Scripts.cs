@@ -7,17 +7,27 @@ public class Shuriken_Scripts : MonoBehaviour
 {
     List<GameObject> listShuriken;
     [Header("Throw")]
+    //L Throw - Normal
     [SerializeField] GameObject shuriken;
     [SerializeField] int magazine = 3;
     [SerializeField] Transform shurikenDirection;
+    //------
     [SerializeField] Animator animator;
     [SerializeField] Player_Movement Player_Movement;
     [SerializeField] Player_Information Player_Information;
     [Header("SKill")]
+    //Skill WInd
     List<GameObject> listSkillShuriken;
     [SerializeField] GameObject skillShuriken;
     [SerializeField] int skillAmount = 10;
+    [SerializeField] internal int isSelectWind;
+    //Skill Flame
+    List<GameObject> listSkillsFlame;
+    [SerializeField] GameObject SkillFlame;
+    [SerializeField] int skillFlameAmount = 10;
+    [SerializeField] internal int isSelectFlame;
     [Header("ChargeFlame")]
+    //L throw - Charge
     List<GameObject> listChargeFlame;
     [SerializeField] GameObject chargeFlame;
     [SerializeField] int chargeFlameAmount = 2;
@@ -25,8 +35,13 @@ public class Shuriken_Scripts : MonoBehaviour
     [SerializeField] float chargeSpeed;
     [SerializeField] bool isCharging;
     [SerializeField] bool isCanUseChargeFlame;
+    //------------
     void Start()
     {
+        //skill
+        isSelectWind = 1;
+        isSelectFlame = 2;
+        //-----
         isCanUseChargeFlame = true;
         chargeSpeed = 2f;
         chargeTime = 0;
@@ -50,6 +65,13 @@ public class Shuriken_Scripts : MonoBehaviour
         {
             GameObject single = Instantiate(chargeFlame);
             listChargeFlame.Add(single);
+            single.SetActive(false);
+        }
+        listSkillsFlame = new List<GameObject>();
+        for (int i = 0; i < skillFlameAmount; i++)
+        {
+            GameObject single = Instantiate(SkillFlame);
+            listSkillsFlame.Add(single);
             single.SetActive(false);
         }
     }
@@ -139,6 +161,23 @@ public class Shuriken_Scripts : MonoBehaviour
             }
         }
     }
+    public void ReleaseSkillFlame()
+    {
+        GameObject availableShuriken = FindAvailableSkillFlame();
+        Vector3 scale = shurikenDirection.localScale;
+        if (availableShuriken != null)
+        {
+            availableShuriken.transform.position = shurikenDirection.position;
+            if (scale.x < 0)
+            {
+                availableShuriken.transform.rotation = Quaternion.Euler(0, 180f, 0);
+            }
+            else if (scale.x > 0)
+            {
+                availableShuriken.transform.rotation = shurikenDirection.rotation;
+            }
+        }
+    }
     public void ChargeFlame()
     {
         GameObject availableShuriken = FindAvailableChargeFlame();
@@ -184,6 +223,18 @@ public class Shuriken_Scripts : MonoBehaviour
     private GameObject FindAvailableChargeFlame()
     {
         foreach (GameObject bullet in listChargeFlame)
+        {
+            if (bullet.activeSelf == false)
+            {
+                bullet.SetActive(true);
+                return bullet;
+            }
+        }
+        return null;
+    }
+    private GameObject FindAvailableSkillFlame()
+    {
+        foreach (GameObject bullet in listSkillsFlame)
         {
             if (bullet.activeSelf == false)
             {

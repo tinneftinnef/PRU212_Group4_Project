@@ -21,11 +21,14 @@ public class Player_Information : MonoBehaviour
     [SerializeField] internal float KBCounter = 0.1f;
     [SerializeField] internal float KBTotalTime = 0.7f;
     [SerializeField] internal bool knockFromRight = false;
+    [SerializeField] internal bool isCanUseSkillK;
+    public GameObject[] listKSkill;
     Rigidbody2D rb;
     //Enemy List
     [SerializeField] EnemyTestTakeHit takeHit;
     void Start()
     {
+        isCanUseSkillK = true;
         currentHealth = maxHealth = 100f;
         currentEP = maxEP = 500f;
         ATK = 10;
@@ -76,4 +79,5 @@ public class Player_Information : MonoBehaviour
             KBCounter -= Time.deltaTime;
         }
     }
+
 }

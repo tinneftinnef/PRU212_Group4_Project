@@ -10,6 +10,8 @@ TagManager:
   - Skill
   - Charge
   - Audio
+  - SkillFlame
+  - Spike
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - UI
   - Player
   - Ground
-  - 
+  - Enemy
   - 
   - 
   - 
