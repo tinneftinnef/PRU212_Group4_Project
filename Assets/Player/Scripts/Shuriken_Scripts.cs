@@ -45,42 +45,28 @@ public class Shuriken_Scripts : MonoBehaviour
         isCanUseChargeFlame = true;
         chargeSpeed = 2f;
         chargeTime = 0;
-        listShuriken = new List<GameObject>();
-        for(int i = 0; i < magazine; i++)
+        listShuriken = createObject(magazine, shuriken);
+        listSkillShuriken = createObject(skillAmount, skillShuriken);
+        listChargeFlame = createObject(chargeFlameAmount, chargeFlame);
+        listSkillsFlame = createObject(skillFlameAmount, SkillFlame);
+    }
+    private List<GameObject> createObject(int total, GameObject objective)
+    {
+        List<GameObject> list = new List<GameObject>();
+        for (int i = 0; i < total; i++)
         {
-            GameObject singleShuriken = Instantiate(shuriken);
-            listShuriken.Add(singleShuriken);
-            singleShuriken.SetActive(false);
-        }
-
-        listSkillShuriken = new List<GameObject>();
-        for(int i = 0; i < skillAmount; i++)
-        {
-            GameObject singleSKillShuriken = Instantiate(skillShuriken);
-            listSkillShuriken.Add(singleSKillShuriken);
-            singleSKillShuriken.SetActive(false);
-        }
-        listChargeFlame = new List<GameObject>();
-        for (int i = 0; i < chargeFlameAmount; i++)
-        {
-            GameObject single = Instantiate(chargeFlame);
-            listChargeFlame.Add(single);
+            GameObject single = Instantiate(objective);
+            list.Add(single);
             single.SetActive(false);
         }
-        listSkillsFlame = new List<GameObject>();
-        for (int i = 0; i < skillFlameAmount; i++)
-        {
-            GameObject single = Instantiate(SkillFlame);
-            listSkillsFlame.Add(single);
-            single.SetActive(false);
-        }
+        return list;
     }
 
     // Update is called once per frame
     void Update()
     {
         SingleShoot();
-        if(Player_Information.currentEP >= 50f)
+        if (Player_Information.currentEP >= 50f)
         {
             if (Player_Movement.isCanUseQ == true)
             {
@@ -98,15 +84,17 @@ public class Shuriken_Scripts : MonoBehaviour
                 isCharging = true;
             }
             chargeTime += chargeSpeed * Time.deltaTime;
-        } else
+        }
+        else
         {
             if (isCharging)
             {
-                if(chargeTime >= 2 && isCanUseChargeFlame && Player_Information.currentEP >= 50f)
+                if (chargeTime >= 2 && isCanUseChargeFlame && Player_Information.currentEP >= 50f)
                 {
                     ChargeFlame();
                     animator.SetTrigger("Throw");
-                } else
+                }
+                else
                 {
                     Throw();
                     animator.SetTrigger("Throw");
