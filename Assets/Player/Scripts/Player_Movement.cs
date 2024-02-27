@@ -27,7 +27,6 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] internal bool isCanUseQ;
     [SerializeField] internal bool isCanUseChargeL;
     [SerializeField] int selectedSkill;
-    [SerializeField] GameObject MemoryForm;
     [Header("DealDamgeToEnemy")]
     [SerializeField] EnemyTestTakeHit takeHit;
     Audio_Manager audioManager;
@@ -58,23 +57,7 @@ public class Player_Movement : MonoBehaviour
         Flip();
         animator.SetBool("IsGround", IsGrounded());
         BasicAttack();
-        swapForm();
-        Tracking();
-    }
-    protected void swapForm()
-    {
-        if(gameObject.activeSelf == true && Input.GetKeyDown(KeyCode.B))
-        {
-            gameObject.SetActive(false);
-            MemoryForm.SetActive(true);
-        }
-    }
-    private void Tracking()
-    {
-        if (gameObject.activeSelf == true)
-        {
-            MemoryForm.transform.position = gameObject.transform.position;
-        }
+        BasicAttack();
     }
     private void FixedUpdate()
     {
