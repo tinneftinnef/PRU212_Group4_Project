@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 1990237677, guid: 31e13e725f17ab548ba3e52015366bcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -199,4 +199,3 @@ MonoBehaviour:
   skillShurikenDamage: 0
   chargeFlameDamage: 0
   skillFlameShurikenDamage: 0
-  takeHit: {fileID: 0}
