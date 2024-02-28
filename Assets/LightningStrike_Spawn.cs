@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightningStrike_Scripts : MonoBehaviour
+public class LightningStrike_Spawn : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject lightningStrike;
     [SerializeField] Transform skillPosition;
     List<GameObject> listLightningStrike;
+    [SerializeField] Player_Information Player_Information;
+    private float duration;
+    private bool isSpawn;
     int totalStrike = 3;
     void Start()
     {
         listLightningStrike = createObject(totalStrike, lightningStrike);
+        duration = 2f;
     }
     private List<GameObject> createObject(int total, GameObject objective)
     {
@@ -27,12 +31,33 @@ public class LightningStrike_Scripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T))
+        UseSkill();
+
+    }
+    private void UseSkill()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.T) && Player_Information.currentEP >= 50f)
         {
+            isSpawn = true;
             GameObject lightning = FindAvailableSkill(listLightningStrike);
+            existDuration(lightning);
             if (lightning != null)
             {
                 lightning.transform.position = skillPosition.position;
+            }
+            Player_Information.useAbility(50f);
+        }
+    }
+    private void existDuration(GameObject lightning)
+    {
+        if (isSpawn)
+        {
+            duration -= Time.deltaTime;
+            if (duration <= 0)
+            {
+                lightning.SetActive(false);
+                isSpawn = false;
             }
         }
     }
@@ -46,13 +71,7 @@ public class LightningStrike_Scripts : MonoBehaviour
                 return suri;
             }
         }
+        
         return null;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
-        {
-            Debug.Log("Hit!" + collision.name);
-        }
     }
 }
