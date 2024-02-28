@@ -9,13 +9,10 @@ public class LightningStrike_Spawn : MonoBehaviour
     [SerializeField] Transform skillPosition;
     List<GameObject> listLightningStrike;
     [SerializeField] Player_Information Player_Information;
-    private float duration;
-    private bool isSpawn;
     int totalStrike = 3;
     void Start()
     {
         listLightningStrike = createObject(totalStrike, lightningStrike);
-        duration = 2f;
     }
     private List<GameObject> createObject(int total, GameObject objective)
     {
@@ -31,34 +28,26 @@ public class LightningStrike_Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UseSkill();
-
+        //UseSkill();
     }
-    private void UseSkill()
+    public void UseSkill()
     {
-        
-        if (Input.GetKeyDown(KeyCode.T) && Player_Information.currentEP >= 50f)
+        StartCoroutine(SpawnLightning());
+    }
+    private IEnumerator SpawnLightning()
+    {
+        GameObject lightning = FindAvailableSkill(listLightningStrike);
+        if (lightning != null)
         {
-            isSpawn = true;
-            GameObject lightning = FindAvailableSkill(listLightningStrike);
-            existDuration(lightning);
-            if (lightning != null)
-            {
-                lightning.transform.position = skillPosition.position;
-            }
-            Player_Information.useAbility(50f);
+            lightning.transform.position = skillPosition.position;
         }
-    }
-    private void existDuration(GameObject lightning)
-    {
-        if (isSpawn)
+        Player_Information.useAbility(50f);
+
+        yield return new WaitForSeconds(2f);
+
+        if (lightning != null)
         {
-            duration -= Time.deltaTime;
-            if (duration <= 0)
-            {
-                lightning.SetActive(false);
-                isSpawn = false;
-            }
+            lightning.SetActive(false);
         }
     }
     private GameObject FindAvailableSkill(List<GameObject> listSKill)

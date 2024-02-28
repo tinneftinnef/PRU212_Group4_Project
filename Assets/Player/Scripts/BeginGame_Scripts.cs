@@ -9,7 +9,7 @@ public class BeginGame_Scripts : MonoBehaviour
     // Start is called before the first frame update
     public bool playerIsClose;
     public GameObject beginPanel;
-    public GameObject Data;
+    public Player_Information Player_Information;
     void Start()
     {
         
@@ -28,6 +28,7 @@ public class BeginGame_Scripts : MonoBehaviour
     }
     public void YesBtn(string ScenceName)
     {
+
         SceneManager.LoadScene(ScenceName);
         beginPanel.SetActive(false);
     }

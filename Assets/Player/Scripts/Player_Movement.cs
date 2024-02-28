@@ -26,10 +26,11 @@ public class Player_Movement : MonoBehaviour
     [Header("UseAbility")]
     [SerializeField] internal bool isCanUseQ;
     [SerializeField] internal bool isCanUseChargeL;
-    [SerializeField] int selectedSkill;
+    [SerializeField] internal int selectedSkill;
     [Header("DealDamgeToEnemy")]
     [SerializeField] EnemyTestTakeHit takeHit;
     Audio_Manager audioManager;
+    [SerializeField] LightningStrike_Spawn lightningSpawn;
 
     private void Awake()
     {
@@ -177,21 +178,30 @@ public class Player_Movement : MonoBehaviour
     }
     IEnumerator ReleaseMultipleTimes(int times, float interval)
     {
-        for (int i = 0; i < times; i++)
+        switch (selectedSkill)
         {
-            switch (selectedSkill)
-            {
-                case 1:
-                    Shuriken_Scripts.ReleaseSkill();
-                    break;
-                case 2:
+            case 1:
+                for (int i = 0; i < times; i++)
+                {
                     Shuriken_Scripts.ReleaseSkillFlame();
-                    break;
-            }
-            
-            canMove = false;
-            yield return new WaitForSeconds(interval);
+                    canMove = false;
+                    yield return new WaitForSeconds(interval);
+                }
+                break;
+            case 2:
+                for (int i = 0; i < times; i++)
+                {
+                    Shuriken_Scripts.ReleaseSkill();
+                    canMove = false;
+                    yield return new WaitForSeconds(interval);
+                };
+                break;
+            case 3:
+                lightningSpawn.UseSkill();
+                break;
+
         }
+
         canMove = true;
     }
 

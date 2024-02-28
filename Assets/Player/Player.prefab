@@ -408,6 +408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5416a2128586af4895462a93f841217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightningStrike: {fileID: 0}
+  skillPosition: {fileID: 0}
+  Player_Information: {fileID: 8939192828108513629}
 --- !u!1 &3343613699116806791
 GameObject:
   m_ObjectHideFlags: 0
