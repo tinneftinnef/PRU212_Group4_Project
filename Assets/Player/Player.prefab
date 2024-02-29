@@ -136,9 +136,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844091340433223971}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.336, y: 0.46, z: 0}
-  m_LocalScale: {x: 5, y: 6, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6950015666610378103}
@@ -332,6 +332,7 @@ MonoBehaviour:
   isCanUseChargeL: 0
   selectedSkill: 0
   takeHit: {fileID: 0}
+  lightningSpawn: {fileID: 0}
 --- !u!114 &8939192828108513629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,7 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5416a2128586af4895462a93f841217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightningStrike: {fileID: 0}
+  lightningStrike:
+  - {fileID: 0}
   skillPosition: {fileID: 0}
   Player_Information: {fileID: 8939192828108513629}
 --- !u!1 &3343613699116806791
@@ -756,24 +758,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70a04db409ba3044980b3bfbd6aeed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shuriken: {fileID: 4596469441098555761, guid: 2753c57ff927d61419573e85de709255, type: 3}
-  magazine: 3
+  shuriken:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   shurikenDirection: {fileID: 527222793984665972}
   animator: {fileID: 6460930629988269605}
   Player_Movement: {fileID: 1637594421531586453}
   Player_Information: {fileID: 8939192828108513629}
-  skillShuriken: {fileID: 6096885110366725025, guid: eb66f93b0a7540741af909f04d5e8764, type: 3}
-  skillAmount: 9
+  skillShuriken:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   isSelectWind: 0
-  SkillFlame: {fileID: 8113777639366046069, guid: 4bb74261187c0d248bdecb07af337b6f, type: 3}
-  skillFlameAmount: 10
+  SkillFlame:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   isSelectFlame: 0
-  chargeFlame: {fileID: 3901583698040550180, guid: 0766626b1613c6a49a11f40548a62276, type: 3}
-  chargeFlameAmount: 2
-  chargeTime: 0
-  chargeSpeed: 0
-  isCharging: 0
-  isCanUseChargeFlame: 0
 --- !u!1 &6030705639519437532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,7 +1040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4465527799660684656
 Transform:
   m_ObjectHideFlags: 0

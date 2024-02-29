@@ -10,16 +10,16 @@ public class MemoryForm_Scripts : MonoBehaviour
     protected Rigidbody2D rb;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
-    [SerializeField] internal bool canMove;
+    [SerializeField] public bool canMove;
     [SerializeField] float speed;
     [SerializeField] float currentMovement;
     [SerializeField] bool isFacingRight;
-    [SerializeField] internal bool canJump;
+    [SerializeField] public bool canJump;
     [SerializeField] float jumpPower;
     [SerializeField] float jumpTime;
     [SerializeField] float jumpTimeCounter;
-    [SerializeField] internal int jumpRemaining;
-    [SerializeField] internal int jumpCheck;
+    [SerializeField] public int jumpRemaining;
+    [SerializeField] public int jumpCheck;
     [SerializeField] int maxJump = 1;
     [SerializeField] float maxFallSpeed = 15f;
     void Start()
@@ -44,7 +44,7 @@ public class MemoryForm_Scripts : MonoBehaviour
         animator.SetBool("IsGround", IsGrounded());
         BasicAttack();
     }
-    internal bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
     }

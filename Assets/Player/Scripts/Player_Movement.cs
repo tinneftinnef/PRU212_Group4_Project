@@ -10,23 +10,23 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
     [Header("Movement")]
-    [SerializeField] internal bool canMove;
+    [SerializeField] public bool canMove;
     [SerializeField] float speed;
     [SerializeField] float currentMovement;
     [SerializeField] bool isFacingRight;
-    [SerializeField] internal bool canJump;
+    [SerializeField] public bool canJump;
     [SerializeField] float jumpPower;
     [SerializeField] float jumpTime;
     [SerializeField] float jumpTimeCounter;
-    [SerializeField] internal int jumpRemaining;
-    [SerializeField] internal int jumpCheck;
+    [SerializeField] public int jumpRemaining;
+    [SerializeField] public int jumpCheck;
     [SerializeField] int maxJump = 1;
     [SerializeField] float maxFallSpeed = 15f;
     [SerializeField] Shuriken_Scripts Shuriken_Scripts;
     [Header("UseAbility")]
-    [SerializeField] internal bool isCanUseQ;
-    [SerializeField] internal bool isCanUseChargeL;
-    [SerializeField] internal int selectedSkill;
+    [SerializeField] public bool isCanUseQ;
+    [SerializeField] public bool isCanUseChargeL;
+    [SerializeField] public int selectedSkill;
     [Header("DealDamgeToEnemy")]
     [SerializeField] EnemyTestTakeHit takeHit;
     Audio_Manager audioManager;
@@ -48,6 +48,7 @@ public class Player_Movement : MonoBehaviour
         isFacingRight = true;
         canJump = true;
         rb = gameObject.GetComponent<Rigidbody2D>();
+        this.selectedSkill = PlayerPrefs.GetInt("SelectedSkillQ");
     }
 
     // Update is called once per frame
@@ -93,7 +94,7 @@ public class Player_Movement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-    internal bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
     }

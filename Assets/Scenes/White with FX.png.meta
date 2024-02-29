@@ -1,0 +1,3669 @@
+fileFormatVersion: 2
+guid: 2d445ab063b91f0418e422e701a77872
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: White with FX_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1496
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6680153ada9f74cb662aabdf0feb44
+      internalID: 1952131565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1496
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080f49edbb0702146bf899becc71e089
+      internalID: -1919831431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1496
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dab0e0ddeb9cca4c9f4cc62651d57a6
+      internalID: -1801116915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de127400c7251f841b96ee2cfbe90012
+      internalID: 1498711551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1408
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca4c23387a6b4e479385acb9cd4fa23
+      internalID: -337132625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1408
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583f2e92c80c7b143b1151d304a68b3b
+      internalID: 1187898578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_6
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1408
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4306a7e8336759f44a3eff4a8c78e027
+      internalID: 2000141067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1408
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc71d7194fb7614d89a47d1862aa5df
+      internalID: -767574450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1320
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88b4d63af676b04391adb18397e3496
+      internalID: 2009193193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_9
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1320
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60341103e194b40458a03b29755c9aba
+      internalID: 602542918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1232
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb99979ba67c56499d1abf80e0cbba8
+      internalID: -636442699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_11
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1232
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47c8f6b67686744ebf342c202355fb3
+      internalID: -651140878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_12
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1232
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9ee53cd4b828b498e3a73cc1c76730
+      internalID: -1527881265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_13
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1232
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b382a7f6306a5644da5039d7b8835aae
+      internalID: 249555046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2760141ffc01d41952d1191335ef50
+      internalID: 1322004145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92baac8f3aac7904596bef44c66a2e19
+      internalID: 1832663491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_16
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9d9beb84466d1458428f7730cc8fe9
+      internalID: -1222380205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_17
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a72390c624d99f4cb4f013ac2539ab9
+      internalID: -1514345774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_18
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4939a934e90d0964ba9741526a5332eb
+      internalID: 1208594051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_19
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5131dca06e89d2d41a2bdba08710d9a8
+      internalID: 648902490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_20
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ced92ac3c49d9418312f09f72ecefa
+      internalID: 263029299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_21
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a48d47a19b32f40aefce137b014194
+      internalID: 1931303566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_22
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff51471d28127a4d90112bfbdee186a
+      internalID: -1829264921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_23
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1144
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1533a79cb351595408f324dfe65a42cb
+      internalID: -1254831240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1056
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e65137fb3e5324089b1376f5896a07
+      internalID: 30891195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_25
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1056
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bba61275bc34742b0b0c4d3eed5bee
+      internalID: 773294839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_26
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1056
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b367b207cd0af7b4d81f184abf9a7068
+      internalID: -1962955975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_27
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1056
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c105cb31fbb054bb43b0233071a9e8
+      internalID: -1696177434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 968
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58c38e59e666f94e9d796dcbe5c507b
+      internalID: -189082229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_29
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 968
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e128a25986f919408f6e41cf03cdb97
+      internalID: -213098573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_30
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 968
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b70d648116eb314a92380a1841975c8
+      internalID: -734120375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_31
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 968
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8d1ca9b9abcf14f802b714e585a37a
+      internalID: 1304994961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccdcc552f8ae974bae5659ec0559330
+      internalID: -301909580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_33
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368ebc9998faa494e8858dd611557752
+      internalID: -596584247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_34
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb49f1e293d67f4288cff942edd94b9
+      internalID: 1934924952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_35
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9498f7964db3562409827ffc1efc2bcb
+      internalID: -1598909128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_36
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aeadf2592c8dad4599cd12ccb0bc6de
+      internalID: 309911690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_37
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffd9b46919f8eb4e876c00fe5cf4331
+      internalID: 1368030861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_38
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25796339da329eb4dbc3293153f3b283
+      internalID: 1896196507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_39
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a479e242ef64bf41af37672d2819dfc
+      internalID: 329767614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_40
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e35b6a6cfe16bf4a85be24bb46c8782
+      internalID: 861745003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_41
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4304e7576a4014c978d3216cc0211d
+      internalID: -17520432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_42
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41c0c4c04c196c42ae0bc99687efc56
+      internalID: -43074722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_43
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9a33393ac563d4ca7042c931fd59b4
+      internalID: 82484444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_44
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 880
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c724932915b586343bbf70c480674eb4
+      internalID: 148044490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 792
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070c1cbff60fa6c408da6a0b3b4639a7
+      internalID: -679012604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_46
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 792
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038e593c6d410a74abdbcaadb7f51c2c
+      internalID: -209793601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_47
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 792
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6f0b3d20f75b44b8d69ad8ee35145a
+      internalID: -922693384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_48
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 792
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fa47f2a4100c04987a272aab02f0c2
+      internalID: 2014868484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad06bb202cbfaa4080a7a1bcb519840
+      internalID: 1891732231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_50
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 704
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb69b5b18de66c419d253e7c56fd1d9
+      internalID: 1527405047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_51
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 704
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8240b11415d594e996ea270d84d5b4
+      internalID: 1117419679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_52
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 704
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d92c2c3af05654aac880b220d91bb9
+      internalID: -1672285448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 616
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7bb61d2e4e7fb44a90fb1639677c01
+      internalID: 1312438970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_54
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 616
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bbc7fdf07bae648a949466aa4e7415
+      internalID: -132908201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_55
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 616
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05bf522088185044bf57f93636e47a9
+      internalID: 1523831297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_56
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 616
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d878c33a84b5d145b8dd34616c04933
+      internalID: 1437833795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_57
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 616
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8219d99fce893147b2c7fa2be88c7f4
+      internalID: 1684540228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_58
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 616
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8ee3935806860479bc45cec0638de6
+      internalID: -246045954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_59
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 616
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d5f67c929bf244ca8499570b21e3f6
+      internalID: -404007705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_60
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 616
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da5dc7747340e5419d729afe71f0848
+      internalID: 1435186623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_61
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 616
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36340b2d6ccb8b46ab4b86208c9395d
+      internalID: 1945988188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480689551bc9f214fae8314451843846
+      internalID: 1290700675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_63
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16fbe09f03775df47b8a27b41cb81fe0
+      internalID: -1919391241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_64
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db9f9f3628724c40b56db34ba78039b
+      internalID: -1401796957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_65
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c5a42ee4a383646b51ddff791bad8c
+      internalID: -846542518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_66
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ab13898366cf8468f5eb51b4a78935
+      internalID: 452307200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_67
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4752a3b8fd4db614389fec6007d2ecac
+      internalID: 1596009916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_68
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c605ce5de528d4e9994b088330cb0b
+      internalID: 1124063672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_69
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727d7b5c185bd374c891bae050545dd0
+      internalID: 919601443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_70
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82ab8edd6e6c3c41b98cacfb910a981
+      internalID: -915197100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_71
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14788db423066b64e9d1233fdb686dc1
+      internalID: 895733812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_72
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 528
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3389a04f090d4a47b0b340b4661208f
+      internalID: -1576073292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_73
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7381ea65c9fed4449f3f1be0032f55b
+      internalID: -1669645202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_74
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b181d07a9790334b859b3d1e4c0e4fe
+      internalID: -258175152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_75
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef28b8b23f9b9a44b417c42c48ff5a1
+      internalID: -2026278250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_76
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16afe25ff52732d4686cdc38df5b798e
+      internalID: -568622495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_77
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5fffe129dfb68478fa18da36bcb372
+      internalID: -2032113583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_78
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e12dd6df5c33440bbf986ea99e8752
+      internalID: 1254105899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_79
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab59bc9326733e4c85b0ab78e317d6d
+      internalID: 2014710831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_80
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cdc8d090c0fb447a32c233f31c2c37
+      internalID: 301865291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_81
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b32c5024da426458145bff193bd396
+      internalID: -1914951235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_82
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 440
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd661e3f46a5c7b47a31dc68ae266865
+      internalID: -690515092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_83
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01975acfa9674e4fa678b4b2b94d695
+      internalID: 1535526378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_84
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52d90d79ff897d4c875e516f38bc6de
+      internalID: 1010178949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_85
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8e5f690b6fe844894838aec5302426
+      internalID: 905103615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_86
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ceb9f7cdb30afd43a30dff86d8b8a1c
+      internalID: -917111836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_87
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0899f5d66b111ce4aa2ae340af390add
+      internalID: -804754946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_88
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803aa71b07694ef4a8bc970df1310ccd
+      internalID: -269185515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_89
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f0c5757a1735e4eae278beee00e26c
+      internalID: -1983844894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_90
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0108a264d0d138142ae707f9a435c4fa
+      internalID: -2003620459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_91
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce80df9dc87ebc488f33dc13e009997
+      internalID: -649451895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_92
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 352
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6653bcc5b309b6b4a8963750d655d3c9
+      internalID: -1054134606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440e0d7934cac60449c1cd4d214b2790
+      internalID: 308907969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_94
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7cddcd3f546dc74483b35dff7e01108
+      internalID: -907840579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_95
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cdfbf1d04b4964587da158c4a7cdff
+      internalID: -2029901908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_96
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87550fd2bc4d0b740bc63b06a2ac6508
+      internalID: -1200913039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_97
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73955392d543e14fae3e1c2c0e1788a
+      internalID: -678678257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_98
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06033cf08b1bf7c4eac2bfab0ea76ca8
+      internalID: -159340994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_99
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857e851f078c2ef4088b297d77d7b635
+      internalID: 1286230975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_100
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f861050bc55f41439eebbfdf53bf0a3
+      internalID: -345747061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_101
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439a138c6ffc12140baeec1bbbf7dd07
+      internalID: 722125417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_102
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5621c51b5cf28bb4e8aa00ee8fd6ad43
+      internalID: 784149802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_103
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 264
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821366e6433f88a40a02d2749103d15e
+      internalID: -1219175515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fb8cf37a8cdb44c9d52aa78f7dfa22
+      internalID: 337094661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_105
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8d59774e57d324b8eb88c047eb4cfc
+      internalID: 418848229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_106
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8e5067b18d51c4f9cc40d27503e14f
+      internalID: 682178096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_107
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abefe6d6c540c704895bfba3d250b0f9
+      internalID: 1417283163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_108
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef1758a7704fa1499eef24ffca1d22f
+      internalID: 1431621065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_109
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a40d6f6c8c2c54589b853ca0358e53
+      internalID: -85039501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_110
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c1eb06c5e996047badd1e83b108a28
+      internalID: -2110633026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_111
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd345b2971b60074dbaf891ae9f56e17
+      internalID: 253224772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_112
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c6fae91b3d17e4b9b673eef18dd283
+      internalID: 218871967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_113
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd7964417f9a2246a089453f0b80654
+      internalID: -1669630977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_114
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13294d1b5a2755d4bbfdba6b6db555c7
+      internalID: 1272422833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_115
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13cad85d139db34cb6c1803155ca128
+      internalID: 381221977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_116
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d669e0e9d4c4045b4c5179120af2be
+      internalID: -2088752235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_117
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fde04bba2a0eab4c84c100e67372d3c
+      internalID: -548266533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_118
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d0086efd49c4a4ead5801f52c61071
+      internalID: 364242260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_119
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8beb86c394512b74ea3581f161710393
+      internalID: 256291009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_120
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f5a5816bf8c604492add4c7ea9bdaa
+      internalID: -910676136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_121
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d518c6ac940ec41b6c4ee997bee104
+      internalID: 12130613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_122
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 176
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11480e9d6a3f6d429687505bb8fbd8c
+      internalID: 913097698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_123
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd0599f3ddccac478d5462764898c0c
+      internalID: -1901683145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_124
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d55fc72c66c3a47bb8c83241a08643
+      internalID: -1279618462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_125
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672c4b5b5edcee64ab3729d7bcecdcde
+      internalID: -159762582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_126
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749ba7630e348b94ca8c18a0142cc31c
+      internalID: 53911222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_127
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8570f47f00a7e4cb2b41e5e280d49c
+      internalID: -915179862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_128
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53d3bd7a7b040c4eb6226d853e63eb7
+      internalID: -994473318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_129
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485476d60fa34d346a9818cfa362c6e8
+      internalID: 1365096592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_130
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b59324e14b9c44fa18c1548ce4fd2d
+      internalID: 349565440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_131
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d62a4fdc1bdfe64f9b01f35eca396f3
+      internalID: 1828443312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_132
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44dccada2b7f8d4daf49808c1d1d93a
+      internalID: 278472670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_133
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab61a783c8c7934086b90956bd28183
+      internalID: -786673767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_134
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3bff02d87f2ad4fba766bf981f6604
+      internalID: 472532114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_135
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5ec04623fca7a4fbe3b57e246525bd
+      internalID: 560257946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_136
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cb8b295ec815049a06b014c788777a
+      internalID: 1505083170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_137
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7ecb233fe7125478013e947bd8715d
+      internalID: 697871752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_138
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0280d8b475f73a408e0a00d283f09e3
+      internalID: 1392545841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_139
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a9e0cbca9b15c4c9b9fa800925e0d9
+      internalID: 1244985693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_140
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6792a38a64a1404b85871044c5c3c66
+      internalID: -432457249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_141
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e979a0fb8448cff48a3e40ef5fa13265
+      internalID: -683708877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_142
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c30cf2518a390419eec1e6a86fd62f
+      internalID: 805610910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_143
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37822d9cd30c4354c86a437d8c3fa94c
+      internalID: 1861407454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_144
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80966405580dd448b9f9964af6a9912
+      internalID: -336804520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_145
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97af315b3f988fb4ebd235490f7e95fe
+      internalID: 247077008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_146
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56deedf4de9831b429ddbebf0377d195
+      internalID: -984349754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_147
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 88
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e2fbdcec796cc45bcf9b6e0d18432b
+      internalID: -997438950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_148
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c17c9c994be7904ca180f5b886cf318
+      internalID: -753638970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_149
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9cfb8d8c712b77408c20800d4bce95f
+      internalID: 397981405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_150
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858e640c68322c54a9d24fa73cb86270
+      internalID: 35857039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_151
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb52023f257b4ac46a7bad2ade81b47e
+      internalID: 1355513143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_152
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc33e127233c60449da77fcde5445c2
+      internalID: 255058235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_153
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3bb14c0529e1b4a8f23a9f3db47b24
+      internalID: -299323473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_154
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b050ce9a0dd0b479d21a1c2856ddfc
+      internalID: -2094766891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_155
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3741c99da0636a74280fac95d41128ad
+      internalID: -34828110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_156
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed01b58c07d524f40b05856cf9b535e6
+      internalID: 2121450025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_157
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e835045619ff344380233af207dcf25
+      internalID: -1598072207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_158
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74755db79c36ec5468db3a82db7dad76
+      internalID: 1462931841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_159
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d7ab0b30e30f84abe6ce2649c639be
+      internalID: 700117947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: White with FX_160
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 75
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5cdb65543625a4e99641b5dea020fd
+      internalID: -358968068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      White with FX_0: 1952131565
+      White with FX_1: -1919831431
+      White with FX_10: -636442699
+      White with FX_100: -345747061
+      White with FX_101: 722125417
+      White with FX_102: 784149802
+      White with FX_103: -1219175515
+      White with FX_104: 337094661
+      White with FX_105: 418848229
+      White with FX_106: 682178096
+      White with FX_107: 1417283163
+      White with FX_108: 1431621065
+      White with FX_109: -85039501
+      White with FX_11: -651140878
+      White with FX_110: -2110633026
+      White with FX_111: 253224772
+      White with FX_112: 218871967
+      White with FX_113: -1669630977
+      White with FX_114: 1272422833
+      White with FX_115: 381221977
+      White with FX_116: -2088752235
+      White with FX_117: -548266533
+      White with FX_118: 364242260
+      White with FX_119: 256291009
+      White with FX_12: -1527881265
+      White with FX_120: -910676136
+      White with FX_121: 12130613
+      White with FX_122: 913097698
+      White with FX_123: -1901683145
+      White with FX_124: -1279618462
+      White with FX_125: -159762582
+      White with FX_126: 53911222
+      White with FX_127: -915179862
+      White with FX_128: -994473318
+      White with FX_129: 1365096592
+      White with FX_13: 249555046
+      White with FX_130: 349565440
+      White with FX_131: 1828443312
+      White with FX_132: 278472670
+      White with FX_133: -786673767
+      White with FX_134: 472532114
+      White with FX_135: 560257946
+      White with FX_136: 1505083170
+      White with FX_137: 697871752
+      White with FX_138: 1392545841
+      White with FX_139: 1244985693
+      White with FX_14: 1322004145
+      White with FX_140: -432457249
+      White with FX_141: -683708877
+      White with FX_142: 805610910
+      White with FX_143: 1861407454
+      White with FX_144: -336804520
+      White with FX_145: 247077008
+      White with FX_146: -984349754
+      White with FX_147: -997438950
+      White with FX_148: -753638970
+      White with FX_149: 397981405
+      White with FX_15: 1832663491
+      White with FX_150: 35857039
+      White with FX_151: 1355513143
+      White with FX_152: 255058235
+      White with FX_153: -299323473
+      White with FX_154: -2094766891
+      White with FX_155: -34828110
+      White with FX_156: 2121450025
+      White with FX_157: -1598072207
+      White with FX_158: 1462931841
+      White with FX_159: 700117947
+      White with FX_16: -1222380205
+      White with FX_160: -358968068
+      White with FX_17: -1514345774
+      White with FX_18: 1208594051
+      White with FX_19: 648902490
+      White with FX_2: -1801116915
+      White with FX_20: 263029299
+      White with FX_21: 1931303566
+      White with FX_22: -1829264921
+      White with FX_23: -1254831240
+      White with FX_24: 30891195
+      White with FX_25: 773294839
+      White with FX_26: -1962955975
+      White with FX_27: -1696177434
+      White with FX_28: -189082229
+      White with FX_29: -213098573
+      White with FX_3: 1498711551
+      White with FX_30: -734120375
+      White with FX_31: 1304994961
+      White with FX_32: -301909580
+      White with FX_33: -596584247
+      White with FX_34: 1934924952
+      White with FX_35: -1598909128
+      White with FX_36: 309911690
+      White with FX_37: 1368030861
+      White with FX_38: 1896196507
+      White with FX_39: 329767614
+      White with FX_4: -337132625
+      White with FX_40: 861745003
+      White with FX_41: -17520432
+      White with FX_42: -43074722
+      White with FX_43: 82484444
+      White with FX_44: 148044490
+      White with FX_45: -679012604
+      White with FX_46: -209793601
+      White with FX_47: -922693384
+      White with FX_48: 2014868484
+      White with FX_49: 1891732231
+      White with FX_5: 1187898578
+      White with FX_50: 1527405047
+      White with FX_51: 1117419679
+      White with FX_52: -1672285448
+      White with FX_53: 1312438970
+      White with FX_54: -132908201
+      White with FX_55: 1523831297
+      White with FX_56: 1437833795
+      White with FX_57: 1684540228
+      White with FX_58: -246045954
+      White with FX_59: -404007705
+      White with FX_6: 2000141067
+      White with FX_60: 1435186623
+      White with FX_61: 1945988188
+      White with FX_62: 1290700675
+      White with FX_63: -1919391241
+      White with FX_64: -1401796957
+      White with FX_65: -846542518
+      White with FX_66: 452307200
+      White with FX_67: 1596009916
+      White with FX_68: 1124063672
+      White with FX_69: 919601443
+      White with FX_7: -767574450
+      White with FX_70: -915197100
+      White with FX_71: 895733812
+      White with FX_72: -1576073292
+      White with FX_73: -1669645202
+      White with FX_74: -258175152
+      White with FX_75: -2026278250
+      White with FX_76: -568622495
+      White with FX_77: -2032113583
+      White with FX_78: 1254105899
+      White with FX_79: 2014710831
+      White with FX_8: 2009193193
+      White with FX_80: 301865291
+      White with FX_81: -1914951235
+      White with FX_82: -690515092
+      White with FX_83: 1535526378
+      White with FX_84: 1010178949
+      White with FX_85: 905103615
+      White with FX_86: -917111836
+      White with FX_87: -804754946
+      White with FX_88: -269185515
+      White with FX_89: -1983844894
+      White with FX_9: 602542918
+      White with FX_90: -2003620459
+      White with FX_91: -649451895
+      White with FX_92: -1054134606
+      White with FX_93: 308907969
+      White with FX_94: -907840579
+      White with FX_95: -2029901908
+      White with FX_96: -1200913039
+      White with FX_97: -678678257
+      White with FX_98: -159340994
+      White with FX_99: 1286230975
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

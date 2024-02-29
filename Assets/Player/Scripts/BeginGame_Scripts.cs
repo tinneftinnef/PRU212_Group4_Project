@@ -10,6 +10,8 @@ public class BeginGame_Scripts : MonoBehaviour
     public bool playerIsClose;
     public GameObject beginPanel;
     public Player_Information Player_Information;
+    public GameObject[] buffedSkill;
+    public Player_Movement Player_Movement;
     void Start()
     {
         
@@ -28,7 +30,17 @@ public class BeginGame_Scripts : MonoBehaviour
     }
     public void YesBtn(string ScenceName)
     {
-
+        for (int i = 0; i < buffedSkill.Length; i++)
+        {
+            if (buffedSkill[i].activeSelf == true)
+            {
+                PlayerPrefs.SetInt("Active", i);
+            }
+        }
+        PlayerPrefs.SetFloat("Health", Player_Information.maxHealth);
+        PlayerPrefs.SetFloat("EP", Player_Information.maxEP);
+        PlayerPrefs.SetFloat("ATK", Player_Information.ATK);
+        PlayerPrefs.SetInt("SelectedSkillQ",Player_Movement.selectedSkill);
         SceneManager.LoadScene(ScenceName);
         beginPanel.SetActive(false);
     }
