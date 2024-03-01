@@ -3,32 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AIController : MonoBehaviour
-    
 {
-    public GameObject Player;
+    public GameObject player;
     public bool flip;
     public float speed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Animator animator;
 
-    // Update is called once per frame
+    public bool Target
+    {
+        get
+        {
+            return animator.GetBool("target");
+        }
+    }
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Update()
     {
         Vector3 scale = transform.localScale;
-        if(Player.transform.position.x > transform.position.x)
+        if (player.transform.position.x > transform.position.x)
         {
-            scale.x = Mathf.Abs(scale.x) * (flip ? -1 :1);
+            scale.x = Mathf.Abs(scale.x) * (flip ? -1 : 1);
             transform.Translate(speed * Time.deltaTime, 0, 0);
         }
         else
         {
             scale.x = Mathf.Abs(scale.x) * -1 * (flip ? -1 : 1);
-            transform.Translate(speed * Time.deltaTime *-1, 0, 0);
-
+            transform.Translate(speed * Time.deltaTime * -1, 0, 0);
         }
         transform.localScale = scale;
+
+        if (Target)
+        {
+            speed = 0;
+            animator.SetBool("canmove", true);
+        }
+        else
+        {
+            animator.SetBool("canmove", false);
+
+        }
     }
 }
