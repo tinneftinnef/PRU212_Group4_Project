@@ -9,6 +9,8 @@ public class Health : MonoBehaviour
     public HealthBar healthBar;
     public Animator animator;
     private bool dead;
+    public GameObject Coin;
+    public int coinDropChance ;
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -32,6 +34,11 @@ public class Health : MonoBehaviour
                 animator.SetTrigger("die");
                 GetComponent<Skeleton>().enabled = false;
                 dead = true;
+                if (Random.Range(0, 101) <= coinDropChance)
+                {
+                    GameObject coin = Instantiate(Coin, transform.position, Quaternion.identity);
+                    coin.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+                }
             }
            
 
