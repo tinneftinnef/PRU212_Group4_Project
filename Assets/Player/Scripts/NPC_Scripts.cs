@@ -47,6 +47,7 @@ public class NPC_Scripts : MonoBehaviour
     }
     public void NextLine()
     {
+        Debug.Log("Clicked");
         continueButton.SetActive(false);
         if(index < dialog.Length - 1)
         {

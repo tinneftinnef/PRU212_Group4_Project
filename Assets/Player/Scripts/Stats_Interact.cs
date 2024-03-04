@@ -14,8 +14,11 @@ public class Stats_Interact : MonoBehaviour
     public GameObject closeButton;
     public bool playerIsClose;
     public GameObject dropdownKButton;
+    public GameObject dropdownQButton;
     public GameObject[] KSkillList;
+    public GameObject[] QSkillList;
     [SerializeField] Player_Information player_Information;
+    [SerializeField] Player_Movement player_Movement;
     int previous = 0;
     int next = 0;
     int actived = 1;
@@ -97,6 +100,28 @@ public class Stats_Interact : MonoBehaviour
                 player_Information.listKSkill[previous].SetActive(false);
             }
             
+        }
+    }
+    public void SelectSkillQ()
+    {
+        if (player_Movement.isCanUseQ == true)
+        {
+            next++;
+            if(next >= 0 && next <= QSkillList.Length - 1)
+            {
+                previous = next - 1;
+                QSkillList[next].SetActive(true);
+                player_Movement.selectedSkill = next;
+                QSkillList[previous].SetActive(false);
+            }
+            if(next > QSkillList.Length - 1)
+            {
+                previous = next - 1;
+                next = actived;
+                QSkillList[next].SetActive(true);
+                QSkillList[previous].SetActive(false);
+                player_Movement.selectedSkill = next;
+            }
         }
     }
 }

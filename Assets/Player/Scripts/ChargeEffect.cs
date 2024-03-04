@@ -19,12 +19,13 @@ public class ChargeEffect : MonoBehaviour
     }
     private void activeCharging()
     {
-        if(shuriken_Scripts.chargeTime >= 1.8f)
-        {
-            animator.SetBool("IsCharging", true);
-        } else
-        {
-            animator.SetBool("IsCharging", false);
-        }
+        //if (shuriken_Scripts.chargeTime >= 1.8f)
+        //{
+        //    animator.SetBool("IsCharging", true);
+        //}
+        //else
+        //{
+        //    animator.SetBool("IsCharging", false);
+        //}
     }
 }
