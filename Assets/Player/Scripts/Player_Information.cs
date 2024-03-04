@@ -7,25 +7,41 @@ using UnityEngine.UI;
 public class Player_Information : MonoBehaviour
 {
     [Header("Stats")]
-    [SerializeField] internal float currentHealth;
+    [SerializeField] public float currentHealth;
     [SerializeField] Image healthBar;
-    [SerializeField] internal float maxHealth;
-    [SerializeField] internal float currentEP;
+    [SerializeField] public float maxHealth;
+    [SerializeField] public float currentEP;
     [SerializeField] Image epBar;
-    [SerializeField] internal float maxEP;
-    [SerializeField] internal float ATK;
+    [SerializeField] public float maxEP;
+    [SerializeField] public float ATK;
     [SerializeField] Animator animator;
     [SerializeField] Player_Movement player_Movement;
     [Header("NockBack")]
-    [SerializeField] internal float KBForce = 2f;
-    [SerializeField] internal float KBCounter = 0.1f;
-    [SerializeField] internal float KBTotalTime = 0.7f;
-    [SerializeField] internal bool knockFromRight = false;
-    [SerializeField] internal bool isCanUseSkillK;
+    [SerializeField] public float KBForce = 2f;
+    [SerializeField] public float KBCounter = 0.1f;
+    [SerializeField] public float KBTotalTime = 0.7f;
+    [SerializeField] public bool knockFromRight = false;
+    [SerializeField] public bool isCanUseSkillK;
     public GameObject[] listKSkill;
     Rigidbody2D rb;
     //Enemy List
     [SerializeField] EnemyTestTakeHit takeHit;
+    //private static Player_Information instance;
+    //public static Player_Information Instance
+    //{
+    //    get
+    //    {
+    //        if (instance == null)
+    //        {
+    //            instance = new Player_Information();
+    //        }
+    //        return instance;
+    //    }
+    //}
+    private void Awake()
+    {
+        //DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
         isCanUseSkillK = true;
@@ -34,6 +50,7 @@ public class Player_Information : MonoBehaviour
         ATK = 10;
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        //this.listKSkill[PlayerPrefs.GetInt("Active")].SetActive(true);
     }
 
     // Update is called once per frame
