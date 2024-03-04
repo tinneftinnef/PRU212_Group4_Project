@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e63e7f9124f505546924422a0cba11e9
+guid: 59f72ad9e24bed84a99a30d914328bba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -106,30 +119,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IDLE_0
+      name: MonedaD_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 3
-        width: 31
-        height: 34
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17f53a643b2e67d468d173aab60d8011
-      internalID: -1642664549
+      spriteID: 7bf589c92fa2f5f48888ac3508321e26
+      internalID: 1114488841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_1
+      name: MonedaD_1
       rect:
         serializedVersion: 2
-        x: 139
-        y: 3
-        width: 31
-        height: 33
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 795c0b553481db2418303ecedb78665e
-      internalID: 1335030024
+      spriteID: 5594f2c7532d96144a187fa3e37eb158
+      internalID: 2013283150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_2
+      name: MonedaD_2
       rect:
         serializedVersion: 2
-        x: 245
-        y: 3
-        width: 31
-        height: 33
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30b8f93b9a402814c90d117ac28fb7d9
-      internalID: -992122610
+      spriteID: e5211016ff9d7e94cbc4aa16b70826c0
+      internalID: -1827006722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IDLE_3
+      name: MonedaD_3
       rect:
         serializedVersion: 2
-        x: 351
-        y: 3
-        width: 31
-        height: 34
+        x: 48
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6212627e00d1b454892e8b643b8e9c31
-      internalID: -1915469435
+      spriteID: 901b80829756edf48bd9ba467da24f5a
+      internalID: 1009631619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MonedaD_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38612fdba115d7c45b1c814fa9451acb
+      internalID: -1827431514
       vertices: []
       indices: 
       edges: []
@@ -217,10 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IDLE_0: -1642664549
-      IDLE_1: 1335030024
-      IDLE_2: -992122610
-      IDLE_3: -1915469435
+      MonedaD_0: 1114488841
+      MonedaD_1: 2013283150
+      MonedaD_2: -1827006722
+      MonedaD_3: 1009631619
+      MonedaD_4: -1827431514
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
