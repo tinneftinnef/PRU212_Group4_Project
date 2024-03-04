@@ -11,6 +11,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [Header("Movement")]
     [SerializeField] public bool canMove;
+    [SerializeField] public bool canFLip;
     [SerializeField] float speed;
     [SerializeField] float currentMovement;
     [SerializeField] bool isFacingRight;
@@ -47,6 +48,7 @@ public class Player_Movement : MonoBehaviour
         canMove = true;
         isFacingRight = true;
         canJump = true;
+        canFLip = true;
         rb = gameObject.GetComponent<Rigidbody2D>();
         this.selectedSkill = PlayerPrefs.GetInt("SelectedSkillQ");
     }
@@ -86,12 +88,15 @@ public class Player_Movement : MonoBehaviour
     }
     protected void Flip()
     {
-        if (isFacingRight && currentMovement < 0f || !isFacingRight && currentMovement > 0f)
+        if (canFLip)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            if (isFacingRight && currentMovement < 0f || !isFacingRight && currentMovement > 0f)
+            {
+                isFacingRight = !isFacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+            }
         }
     }
     public bool IsGrounded()
@@ -185,6 +190,8 @@ public class Player_Movement : MonoBehaviour
                 for (int i = 0; i < times; i++)
                 {
                     Shuriken_Scripts.ReleaseSkillFlame();
+                    canFLip = false;
+                    canJump = false;
                     canMove = false;
                     yield return new WaitForSeconds(interval);
                 }
@@ -193,16 +200,22 @@ public class Player_Movement : MonoBehaviour
                 for (int i = 0; i < times; i++)
                 {
                     Shuriken_Scripts.ReleaseSkill();
+                    canFLip = false;
+                    canJump = false;
                     canMove = false;
                     yield return new WaitForSeconds(interval);
                 };
                 break;
             case 3:
                 lightningSpawn.UseSkill();
+                canFLip = false;
+                canJump = false;
+                canMove = false;
                 break;
 
         }
-
+        canFLip = true;
+        canJump = true;
         canMove = true;
     }
 
