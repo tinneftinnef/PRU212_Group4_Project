@@ -10,7 +10,10 @@ public class Health : MonoBehaviour
     public Animator animator;
     private bool dead;
     public GameObject Coin;
-    public int coinDropChance ;
+    public GameObject Blood;
+    public GameObject Mana;
+
+    private int bloodManaDropChance = 2;
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -34,11 +37,21 @@ public class Health : MonoBehaviour
                 animator.SetTrigger("die");
                 GetComponent<Skeleton>().enabled = false;
                 dead = true;
-                if (Random.Range(0, 101) <= coinDropChance)
+                GameObject coin = Instantiate(Coin, transform.position, Quaternion.identity);
+                coin.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+
+                // Drop a blood or mana with 1 in 2 chance
+                if (Random.Range(0, bloodManaDropChance) == 0)
                 {
-                    GameObject coin = Instantiate(Coin, transform.position, Quaternion.identity);
-                    coin.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+                    GameObject blood = Instantiate(Blood, transform.position, Quaternion.identity);
+                    blood.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
                 }
+                else
+                {
+                    GameObject mana = Instantiate(Mana, transform.position, Quaternion.identity);
+                    mana.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+                }
+
             }
            
 

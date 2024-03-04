@@ -231,7 +231,9 @@ MonoBehaviour:
   healthBar: {fileID: 7445080421822665553}
   animator: {fileID: 3813857798413240887}
   Coin: {fileID: 4996543614587308656, guid: dacf38692f70cbe4c987500cf2ad555e, type: 3}
-  coinDropChance: 80
+  Blood: {fileID: 3945967678679968875, guid: 57da130ca115362409e24344261ef8e7, type: 3}
+  Mana: {fileID: 0}
+  dropChance: 3
 --- !u!1 &4188095715308779285
 GameObject:
   m_ObjectHideFlags: 0
