@@ -50,6 +50,7 @@ public class Player_Information : MonoBehaviour
         ATK = 10;
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        //this.listKSkill[PlayerPrefs.GetInt("Active")].SetActive(true);
     }
 
     // Update is called once per frame

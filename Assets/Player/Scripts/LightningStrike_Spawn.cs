@@ -41,7 +41,7 @@ public class LightningStrike_Spawn : MonoBehaviour
     {
         foreach (GameObject suri in lightningStrike)
         {
-            Debug.Log(suri.name);
+            //Debug.Log(suri.name);
             if (suri.activeSelf == false)
             {
                 suri.SetActive(true);
