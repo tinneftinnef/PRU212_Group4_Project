@@ -23,6 +23,11 @@ public class Health : MonoBehaviour
         animator = GetComponent<Animator>();
 
     }
+    public IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
+    }
     public void TakeDamage(float _damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - _damage,0,startingHealth);
@@ -42,6 +47,8 @@ public class Health : MonoBehaviour
                 GetComponent<Skeleton>().enabled = false;
 
                 GetComponent<AIController>().enabled = false;
+                StartCoroutine(DestroyAfterDelay(10f));
+
 
                 dead = true;
                 GameObject coin = Instantiate(Coin, transform.position, Quaternion.identity);

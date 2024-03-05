@@ -23,6 +23,11 @@ public class HealthEye : MonoBehaviour
         animator = GetComponent<Animator>();
 
     }
+    public IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
+    }
     public void TakeDamage(float _damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
@@ -43,7 +48,8 @@ public class HealthEye : MonoBehaviour
                 GetComponent<Eye>().enabled = false;
 
                 GetComponent<FlyingEnemy>().enabled = false;
-
+                GetComponent<Rigidbody2D>().gravityScale = 1;
+                StartCoroutine(DestroyAfterDelay(10f));
                 dead = true;
                 GameObject coin = Instantiate(Coin, transform.position, Quaternion.identity);
                 coin.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
