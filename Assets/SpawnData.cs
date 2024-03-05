@@ -10,6 +10,7 @@ public class SpawnData : MonoBehaviour
     [SerializeField] GameObject[] buffK;
     void Start()
     {
+        player_Infor.player_coin = PlayerPrefs.GetInt("Coin");
         Player_Movement.selectedSkill = PlayerPrefs.GetInt("SelectedSkillQ");
         player_Infor.currentHealth = player_Infor.maxHealth = PlayerPrefs.GetFloat("Health");
         player_Infor.currentEP = player_Infor.maxEP = PlayerPrefs.GetFloat("EP");

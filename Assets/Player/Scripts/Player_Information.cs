@@ -7,6 +7,10 @@ using UnityEngine.UI;
 public class Player_Information : MonoBehaviour
 {
     [Header("Stats")]
+
+    [SerializeField] public int levelHP = 1;
+    [SerializeField] public int levelATK = 1;
+    [SerializeField] public int levelEP = 1;
     [SerializeField] public float currentHealth;
     [SerializeField] Image healthBar;
     [SerializeField] public float maxHealth;
@@ -15,7 +19,14 @@ public class Player_Information : MonoBehaviour
     [SerializeField] public float maxEP;
     [SerializeField] public float ATK;
     [SerializeField] public int player_coin;
+    [SerializeField] public int player_bottleHealth;
+    [SerializeField] public int player_bottleMana;
     [SerializeField] Text currentCoin;
+    [SerializeField] Text currentBottleHealth;
+    [SerializeField] Text currentBottleMana;
+    [SerializeField] Text textLevelHP;
+    [SerializeField] Text textLevelATK;
+    [SerializeField] Text textLevelEP;
     [SerializeField] Animator animator;
     [SerializeField] Player_Movement player_Movement;
     [Header("NockBack")]
@@ -54,11 +65,70 @@ public class Player_Information : MonoBehaviour
     void Update()
     {
         KnockBack();
+        bindingText();
+    }
+    public void bindingText()
+    {
         currentCoin.text = player_coin.ToString();
+        currentBottleHealth.text = player_bottleHealth.ToString();
+        currentBottleMana.text = player_bottleMana.ToString();
+        textLevelHP.text = (levelHP * 100).ToString();
+        textLevelATK.text = (levelATK * 100).ToString();
+        textLevelEP.text = (levelEP * 100).ToString();
     }
     public void usingCoin(int coin)
     {
         player_coin -= coin; 
+    }
+    public void usingBottleHealth(int health)
+    {
+        player_bottleHealth -= health;
+    }
+    public void usingBottleMana(int mana)
+    {
+        player_bottleMana -= mana;
+    }
+    public void upgradeHP(int health)
+    {
+        int requireCoin = levelHP * 100;
+        if(player_coin >= requireCoin)
+        {
+            maxHealth += health;
+            levelHP++;
+            player_coin -= requireCoin;
+        }
+        else
+        {
+            Debug.Log($"Need {requireCoin - player_coin} more coin to upgrade");
+        }
+    }
+    public void upgradeEP(int EP)
+    {
+        int requireCoin = levelEP * 100;
+        if (player_coin >= requireCoin)
+        {
+            maxEP += EP;
+            levelEP++;
+            player_coin -= requireCoin;
+        }
+        else
+        {
+            Debug.Log($"Need {requireCoin - player_coin} more coin to upgrade");
+        }
+    }
+    public void upgradeATK(int ATKPlus)
+    {
+        int requireCoin = levelATK * 100;
+        if (player_coin >= requireCoin)
+        {
+            ATK += ATKPlus;
+            levelATK++;
+            player_coin -= requireCoin;
+        }
+        else
+        {
+            Debug.Log($"Need {requireCoin - player_coin} more coin to upgrade");
+        }
     }
     public void TakeDamage(float damage)
     {

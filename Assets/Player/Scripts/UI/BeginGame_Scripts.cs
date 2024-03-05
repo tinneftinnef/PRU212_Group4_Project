@@ -37,6 +37,7 @@ public class BeginGame_Scripts : MonoBehaviour
                 PlayerPrefs.SetInt("Active", i);
             }
         }
+        PlayerPrefs.SetInt("Coin", Player_Information.player_coin);
         PlayerPrefs.SetFloat("Health", Player_Information.maxHealth);
         PlayerPrefs.SetFloat("EP", Player_Information.maxEP);
         PlayerPrefs.SetFloat("ATK", Player_Information.ATK);
