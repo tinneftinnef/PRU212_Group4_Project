@@ -14,7 +14,7 @@ public class BeginGame_Scripts : MonoBehaviour
     public Player_Movement Player_Movement;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,11 +24,12 @@ public class BeginGame_Scripts : MonoBehaviour
     }
     private void ChangeMap()
     {
-        if(playerIsClose && Input.GetKeyDown(KeyCode.E)){
+        if (playerIsClose && Input.GetKeyDown(KeyCode.E))
+        {
             beginPanel.SetActive(true);
         }
     }
-    public void YesBtn(string ScenceName)
+    public void YesBtn()
     {
         for (int i = 0; i < buffedSkill.Length; i++)
         {
@@ -41,8 +42,20 @@ public class BeginGame_Scripts : MonoBehaviour
         PlayerPrefs.SetFloat("Health", Player_Information.maxHealth);
         PlayerPrefs.SetFloat("EP", Player_Information.maxEP);
         PlayerPrefs.SetFloat("ATK", Player_Information.ATK);
-        PlayerPrefs.SetInt("SelectedSkillQ",Player_Movement.selectedSkill);
-        SceneManager.LoadScene(ScenceName);
+        PlayerPrefs.SetInt("LvHP", Player_Information.levelHP);
+        PlayerPrefs.SetInt("LvEP", Player_Information.levelEP);
+        PlayerPrefs.SetInt("LvATK", Player_Information.levelATK);
+        PlayerPrefs.SetInt("SelectedSkillQ", Player_Movement.selectedSkill);
+        int randomNumber = Random.Range(1, 3);
+        switch (randomNumber)
+        {
+            case 1:
+                SceneManager.LoadScene("PlayScence");
+                break;
+            case 2:
+                SceneManager.LoadScene("PlayScence1");
+                break;
+        }
         beginPanel.SetActive(false);
     }
     public void NoBtn()
@@ -51,7 +64,7 @@ public class BeginGame_Scripts : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             playerIsClose = true;
         }

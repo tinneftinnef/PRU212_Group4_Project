@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player_Information : MonoBehaviour
@@ -54,11 +55,12 @@ public class Player_Information : MonoBehaviour
     void Start()
     {
         isCanUseSkillK = true;
-        currentHealth = maxHealth = 100f;
-        currentEP = maxEP = 500f;
+        currentHealth = maxHealth;
+        currentEP = maxEP;
         ATK = 10;
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        this.player_coin = PlayerPrefs.GetInt("Coin");
     }
 
     // Update is called once per frame
@@ -72,9 +74,18 @@ public class Player_Information : MonoBehaviour
         currentCoin.text = player_coin.ToString();
         currentBottleHealth.text = player_bottleHealth.ToString();
         currentBottleMana.text = player_bottleMana.ToString();
-        textLevelHP.text = (levelHP * 100).ToString();
-        textLevelATK.text = (levelATK * 100).ToString();
-        textLevelEP.text = (levelEP * 100).ToString();
+        if(textLevelHP != null)
+        {
+            textLevelHP.text = (levelHP * 100).ToString();
+        }
+        if(textLevelATK != null)
+        {
+            textLevelATK.text = (levelATK * 100).ToString();
+        }
+        if(textLevelEP != null)
+        {
+            textLevelEP.text = (levelEP * 100).ToString();
+        }
     }
     public void usingCoin(int coin)
     {
@@ -140,6 +151,7 @@ public class Player_Information : MonoBehaviour
         if(currentHealth <= 0)
         {
             animator.SetBool("IsDead", true);
+            SceneManager.LoadScene("EndGame");
         }
     }
     public void useAbility(float mana)

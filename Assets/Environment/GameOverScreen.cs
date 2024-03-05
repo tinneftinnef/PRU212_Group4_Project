@@ -7,12 +7,10 @@ using UnityEngine.UI;
 public class GameOverScreen : MonoBehaviour
 {
     [SerializeField] public Text pointText;
-    private int score;
     // Start is called before the first frame update
     void Start()
     {
-        score = 10;
-        pointText.text = "Score : " + score + " Point";
+        pointText.text = "Score : " + PlayerPrefs.GetInt("Coin") + " Point";
     }
 
     public void ClickReplay()

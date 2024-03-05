@@ -10682,6 +10682,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1627685517}
     - target: {fileID: 3275693686904060337, guid: 67f3384d948d5c04c8463fa78a8b212a, type: 3}
+      propertyPath: InteractPanel
+      value: 
+      objectReference: {fileID: 1383588832}
+    - target: {fileID: 3275693686904060337, guid: 67f3384d948d5c04c8463fa78a8b212a, type: 3}
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 1487504885}
@@ -11987,7 +11991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5266853446965291062, guid: 710d0cdfaf7966e40814f5809a1c3f1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5266853446965291062, guid: 710d0cdfaf7966e40814f5809a1c3f1a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -12684,6 +12688,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 708084773}
     - target: {fileID: 8939192828108513629, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
+      propertyPath: maxEP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939192828108513629, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
+      propertyPath: levelEP
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939192828108513629, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
+      propertyPath: levelHP
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939192828108513629, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
+      propertyPath: levelATK
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939192828108513629, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939192828108513629, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
       propertyPath: currentCoin
       value: 
       objectReference: {fileID: 707513795}
@@ -12743,6 +12767,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1383588832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7555602237481084448, guid: 710d0cdfaf7966e40814f5809a1c3f1a, type: 3}
+  m_PrefabInstance: {fileID: 1122753055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1446530701
 GameObject:
   m_ObjectHideFlags: 0
@@ -13749,6 +13778,10 @@ PrefabInstance:
       propertyPath: plusHPButton
       value: 
       objectReference: {fileID: 350432754}
+    - target: {fileID: 4471721185594828605, guid: bfb855c57f34e974bb970c9a6909bed3, type: 3}
+      propertyPath: InteractPanel
+      value: 
+      objectReference: {fileID: 1383588832}
     - target: {fileID: 4471721185594828605, guid: bfb855c57f34e974bb970c9a6909bed3, type: 3}
       propertyPath: plusATKButton
       value: 
