@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class HealthMushroom : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
     public float currentHealth;
-    
+
 
     public HealthBar healthBar;
     public Animator animator;
@@ -25,9 +25,10 @@ public class Health : MonoBehaviour
     }
     public void TakeDamage(float _damage)
     {
-        currentHealth = Mathf.Clamp(currentHealth - _damage,0,startingHealth);
+        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
         healthBar.SetHealth(currentHealth);
-        if (currentHealth > 0) {
+        if (currentHealth > 0)
+        {
             //player hurt
             animator.SetTrigger("hurt");
 
@@ -38,8 +39,8 @@ public class Health : MonoBehaviour
             {
                 //player die
                 animator.SetTrigger("die");
-               animator.SetBool("isAlive", true);
-                GetComponent<Skeleton>().enabled = false;
+                animator.SetBool("isAlive", true);
+                GetComponent<Mushroom>().enabled = false;
 
                 GetComponent<AIController>().enabled = false;
 
@@ -48,7 +49,7 @@ public class Health : MonoBehaviour
                 coin.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
 
                 // Drop a blood or mana with 1 in 2 chance
-                if (Random.Range(0, bloodManaDropChance) == 0)
+                if (Random.Range(0, 2) == 0)
                 {
                     GameObject blood = Instantiate(Blood, transform.position, Quaternion.identity);
                     blood.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
@@ -60,20 +61,20 @@ public class Health : MonoBehaviour
                 }
 
             }
-           
+
 
         }
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(20);
         }
