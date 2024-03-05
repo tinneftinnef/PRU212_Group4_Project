@@ -14,6 +14,8 @@ public class Player_Information : MonoBehaviour
     [SerializeField] Image epBar;
     [SerializeField] public float maxEP;
     [SerializeField] public float ATK;
+    [SerializeField] public int player_coin;
+    [SerializeField] Text currentCoin;
     [SerializeField] Animator animator;
     [SerializeField] Player_Movement player_Movement;
     [Header("NockBack")]
@@ -38,10 +40,6 @@ public class Player_Information : MonoBehaviour
     //        return instance;
     //    }
     //}
-    private void Awake()
-    {
-        //DontDestroyOnLoad(gameObject);
-    }
     void Start()
     {
         isCanUseSkillK = true;
@@ -50,18 +48,25 @@ public class Player_Information : MonoBehaviour
         ATK = 10;
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
-        //this.listKSkill[PlayerPrefs.GetInt("Active")].SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
         KnockBack();
+        currentCoin.text = player_coin.ToString();
+    }
+    public void usingCoin(int coin)
+    {
+        player_coin -= coin; 
     }
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        healthBar.fillAmount = currentHealth / maxHealth;
+        if(healthBar != null)
+        {
+            healthBar.fillAmount = currentHealth / maxHealth;
+        }
         if(currentHealth <= 0)
         {
             animator.SetBool("IsDead", true);
@@ -70,7 +75,10 @@ public class Player_Information : MonoBehaviour
     public void useAbility(float mana)
     {
         currentEP -= mana;
-        epBar.fillAmount = currentEP / maxEP;
+        if(epBar != null)
+        {
+            epBar.fillAmount = currentEP / maxEP;
+        }
     }
     protected void KnockBack()
     {

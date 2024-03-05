@@ -10419,6 +10419,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67f3384d948d5c04c8463fa78a8b212a, type: 3}
+--- !u!114 &707513795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6837867764414433330, guid: 710d0cdfaf7966e40814f5809a1c3f1a, type: 3}
+  m_PrefabInstance: {fileID: 1122753055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &708084773 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 765909267441767289, guid: 710d0cdfaf7966e40814f5809a1c3f1a, type: 3}
@@ -12179,6 +12190,10 @@ PrefabInstance:
       propertyPath: epBar
       value: 
       objectReference: {fileID: 708084773}
+    - target: {fileID: 8939192828108513629, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
+      propertyPath: currentCoin
+      value: 
+      objectReference: {fileID: 707513795}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
