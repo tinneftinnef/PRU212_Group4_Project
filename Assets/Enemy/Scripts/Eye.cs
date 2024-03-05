@@ -50,15 +50,24 @@ public class Eye : MonoBehaviour
             cooldown -= Time.deltaTime;
         }
 
-        // Stop the attack animation from playing continuously when the enemy dies
-        if (dead)
-        {
-            animator.SetTrigger("atk2");
-        }
+      
     }
 
     private void Attack()
     {
-        // Your attack logic here
+      
+        Collider2D[] hitColliders = attackZone.GetComponents<Collider2D>();
+
+        foreach (Collider2D hitCollider in hitColliders)
+        {
+            if (hitCollider.gameObject.CompareTag("Player"))
+            {
+                Health playerHealth = hitCollider.gameObject.GetComponent<Health>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(attackDamage);
+                }
+            }
+        }
     }
 }

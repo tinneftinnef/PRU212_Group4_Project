@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Mushroom : MonoBehaviour
@@ -8,6 +9,9 @@ public class Mushroom : MonoBehaviour
     public DetectionZone attackZone;
     public bool _target = false;
     private bool dead;
+    public float attackDamage;
+    public float attackRate = 1.0f;
+    private float cooldown;
     public bool target
     {
         get { return _target; }
@@ -39,15 +43,36 @@ public class Mushroom : MonoBehaviour
         target = attackZone.detectedColliders.Count > 0;
 
 
-        animator.GetBool("isAlive");
-        if(isAlive == true)
+        if (target && cooldown <= 0)
         {
-            GetComponent<Mushroom>().enabled = false;
-            GetComponent<AIController>().enabled = false;
-
+            Attack();
+            cooldown = attackRate;
         }
 
+        if (cooldown > 0)
+        {
+            cooldown -= Time.deltaTime;
+        }
+
+
+    }
+    private void Attack()
+    {
+
+        Collider2D[] hitColliders = attackZone.GetComponents<Collider2D>();
+
+        foreach (Collider2D hitCollider in hitColliders)
+        {
+            if (hitCollider.gameObject.CompareTag("Player"))
+            {
+                Health playerHealth = hitCollider.gameObject.GetComponent<Health>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(attackDamage);
+                }
+            }
+        }
     }
 
-   
+
 }
