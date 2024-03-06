@@ -31,14 +31,21 @@ public class BeginGame_Scripts : MonoBehaviour
     }
     public void YesBtn()
     {
-        for (int i = 0; i < buffedSkill.Length; i++)
+        if (Player_Information.isCanUseSkillK)
         {
-            if (buffedSkill[i].activeSelf == true)
+            PlayerPrefs.SetInt("KUnlock", 1);
+            for (int i = 0; i < buffedSkill.Length; i++)
             {
-                PlayerPrefs.SetInt("Active", i);
+                if (buffedSkill[i].activeSelf == true)
+                {
+                    PlayerPrefs.SetInt("Active", i);
+                }
             }
         }
-        PlayerPrefs.SetInt("Coin", Player_Information.player_coin);
+        if (Player_Movement.isCanUseQ)
+        {
+            PlayerPrefs.SetInt("QUnlock", 1);
+        }
         PlayerPrefs.SetFloat("Health", Player_Information.maxHealth);
         PlayerPrefs.SetFloat("EP", Player_Information.maxEP);
         PlayerPrefs.SetFloat("ATK", Player_Information.ATK);
@@ -46,12 +53,14 @@ public class BeginGame_Scripts : MonoBehaviour
         PlayerPrefs.SetInt("LvEP", Player_Information.levelEP);
         PlayerPrefs.SetInt("LvATK", Player_Information.levelATK);
         PlayerPrefs.SetInt("SelectedSkillQ", Player_Movement.selectedSkill);
+        
         int randomNumber = Random.Range(1, 3);
         switch (randomNumber)
         {
             case 1:
                 SceneManager.LoadScene("PlayScence");
                 break;
+
             case 2:
                 SceneManager.LoadScene("PlayScence1");
                 break;

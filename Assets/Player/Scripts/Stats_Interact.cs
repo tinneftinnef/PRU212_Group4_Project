@@ -26,7 +26,23 @@ public class Stats_Interact : MonoBehaviour
     {
 
     }
-
+    void checkUseSkill()
+    {
+        if (player_Movement.isCanUseQ)
+        {
+            dropdownQButton.SetActive(true);
+        } else if (!player_Movement.isCanUseQ)
+        {
+            dropdownQButton.SetActive(false);
+        }
+        if (player_Information.isCanUseSkillK)
+        {
+            dropdownKButton.SetActive(true);
+        } else if (!player_Information.isCanUseSkillK)
+        {
+            dropdownKButton.SetActive(false);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -41,6 +57,7 @@ public class Stats_Interact : MonoBehaviour
                 statsPanel.SetActive(true);
             }
         }
+        checkUseSkill();
     }
     public void ClosedButton()
     {

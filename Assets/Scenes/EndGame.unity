@@ -937,6 +937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointText: {fileID: 1881329152}
+  player_Movement: {fileID: 1637594421531586453, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
+  player_Information: {fileID: 8939192828108513629, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
 --- !u!1 &1568334645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,7 +1111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00f04d5f13f586488593be2740d6dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointText: {fileID: 1881329152}
 --- !u!1 &1618843279
 GameObject:
   m_ObjectHideFlags: 0

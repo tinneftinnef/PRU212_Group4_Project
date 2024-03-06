@@ -19,6 +19,9 @@ public class Player_Information : MonoBehaviour
     [SerializeField] Image epBar;
     [SerializeField] public float maxEP;
     [SerializeField] public float ATK;
+
+
+
     [SerializeField] public int player_coin;
     [SerializeField] public int player_bottleHealth;
     [SerializeField] public int player_bottleMana;
@@ -28,6 +31,11 @@ public class Player_Information : MonoBehaviour
     [SerializeField] Text textLevelHP;
     [SerializeField] Text textLevelATK;
     [SerializeField] Text textLevelEP;
+
+    [SerializeField] GameObject BuyQButton;
+    [SerializeField] GameObject BuyKButton;
+
+
     [SerializeField] Animator animator;
     [SerializeField] Player_Movement player_Movement;
     [Header("NockBack")]
@@ -52,15 +60,31 @@ public class Player_Information : MonoBehaviour
     //        return instance;
     //    }
     //}
+    private void Awake()
+    {
+        isCanUseSkillK = false;
+        ATK = 10;
+    }
     void Start()
     {
-        isCanUseSkillK = true;
         currentHealth = maxHealth;
         currentEP = maxEP;
-        ATK = 10;
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
-        this.player_coin = PlayerPrefs.GetInt("Coin");
+        this.player_coin = PlayerPrefs.GetInt("CoinEarn");
+        levelHP = PlayerPrefs.GetInt("LvHP");
+        levelEP = PlayerPrefs.GetInt("LvEP");
+        levelATK = PlayerPrefs.GetInt("LvATK");
+
+        currentHealth = maxHealth = PlayerPrefs.GetFloat("Health");
+        currentEP = maxEP = PlayerPrefs.GetFloat("EP");
+        ATK = PlayerPrefs.GetFloat("ATK");
+        if (PlayerPrefs.GetInt("KUnlock") == 1)
+        {
+            isCanUseSkillK = true;
+            listKSkill[PlayerPrefs.GetInt("Active")].SetActive(true);
+        }
+        
     }
 
     // Update is called once per frame
@@ -68,6 +92,8 @@ public class Player_Information : MonoBehaviour
     {
         KnockBack();
         bindingText();
+        checkActiveSKill();
+        PlayerPrefs.SetInt("CoinEarn", player_coin);
     }
     public void bindingText()
     {
@@ -98,6 +124,48 @@ public class Player_Information : MonoBehaviour
     public void usingBottleMana(int mana)
     {
         player_bottleMana -= mana;
+    }
+    public void BuySKillK()
+    {
+        if(player_coin >= 5000)
+        {
+            player_coin -= 5000;
+            isCanUseSkillK = true;
+        }
+        else
+        {
+            Debug.Log($"Need {5000 - player_coin} more coin to unlock");
+        }
+    }
+    public void BuySKillQ()
+    {
+        if (player_coin >= 5000)
+        {
+            player_coin -= 5000;
+            player_Movement.isCanUseQ = true;
+            PlayerPrefs.SetInt("UseQ", 1);
+        }
+        else
+        {
+            Debug.Log($"Need {5000 - player_coin} more coin to unlock");
+        }
+    }
+    private void checkActiveSKill()
+    {
+        if (isCanUseSkillK == true)
+        {
+            if(BuyKButton != null)
+            {
+                BuyKButton.SetActive(false);
+            }
+        }
+        if (player_Movement.isCanUseQ == true)
+        {
+            if(BuyQButton != null)
+            {
+                BuyQButton.SetActive(false);
+            }
+        }
     }
     public void upgradeHP(int health)
     {

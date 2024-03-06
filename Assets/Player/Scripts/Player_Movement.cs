@@ -35,12 +35,13 @@ public class Player_Movement : MonoBehaviour
 
     private void Awake()
     {
+        isCanUseQ = false;
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<Audio_Manager>();
     }
 
     void Start()
     {
-        isCanUseQ = true;
+        
         selectedSkill = 0;
         speed = 10f;
         jumpPower = 10f;
@@ -50,7 +51,14 @@ public class Player_Movement : MonoBehaviour
         canJump = true;
         canFLip = true;
         rb = gameObject.GetComponent<Rigidbody2D>();
-        this.selectedSkill = PlayerPrefs.GetInt("SelectedSkillQ");
+
+        if(PlayerPrefs.GetInt("UseQ") == 1)
+        {
+            this.isCanUseQ = true;
+            this.selectedSkill = PlayerPrefs.GetInt("SelectedSkillQ");
+        }
+        
+
     }
 
     // Update is called once per frame

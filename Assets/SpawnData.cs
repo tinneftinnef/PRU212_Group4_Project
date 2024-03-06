@@ -13,12 +13,20 @@ public class SpawnData : MonoBehaviour
         player_Infor.levelHP = PlayerPrefs.GetInt("LvHP");
         player_Infor.levelEP = PlayerPrefs.GetInt("LvEP");
         player_Infor.levelATK = PlayerPrefs.GetInt("LvATK");
-        player_Infor.player_coin = PlayerPrefs.GetInt("Coin");
-        Player_Movement.selectedSkill = PlayerPrefs.GetInt("SelectedSkillQ");
+        player_Infor.player_coin = PlayerPrefs.GetInt("CoinEarn");
+        if(PlayerPrefs.GetInt("QUnlock") == 1)
+        {
+            Player_Movement.isCanUseQ = true;
+            Player_Movement.selectedSkill = PlayerPrefs.GetInt("SelectedSkillQ");
+        }
+        
         player_Infor.currentHealth = player_Infor.maxHealth = PlayerPrefs.GetFloat("Health");
         player_Infor.currentEP = player_Infor.maxEP = PlayerPrefs.GetFloat("EP");
         player_Infor.ATK = PlayerPrefs.GetFloat("ATK");
-        player_Infor.isCanUseSkillK = true;
+        if(PlayerPrefs.GetInt("KUnlock") == 1)
+        {
+            player_Infor.isCanUseSkillK = true;
+        }
         buffK[PlayerPrefs.GetInt("Active")].SetActive(true);
     }
 
