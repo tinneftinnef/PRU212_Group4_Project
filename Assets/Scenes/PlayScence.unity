@@ -1398,6 +1398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1562954407214965686, guid: 710d0cdfaf7966e40814f5809a1c3f1a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2280490166868045364, guid: 710d0cdfaf7966e40814f5809a1c3f1a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3253,11 +3257,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4766830615410442, guid: ad8aee53221f9c44bb741edfa9bbafe3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.24
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: 4766830615410442, guid: ad8aee53221f9c44bb741edfa9bbafe3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.77
+      value: -4.44
       objectReference: {fileID: 0}
     - target: {fileID: 4766830615410442, guid: ad8aee53221f9c44bb741edfa9bbafe3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3329,7 +3333,7 @@ Transform:
   m_GameObject: {fileID: 1339375642}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.4, y: 0.1, z: 0.117098644}
+  m_LocalPosition: {x: 27.4, y: 0.2, z: 0.117098644}
   m_LocalScale: {x: 1.3748, y: 1.3748, z: 1.3748}
   m_ConstrainProportionsScale: 0
   m_Children: []
