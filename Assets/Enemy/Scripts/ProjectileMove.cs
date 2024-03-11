@@ -2,21 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class ProjectileMove : MonoBehaviour
 {
     [SerializeField] private float speed;
-
     [SerializeField] private float resetTime;
     private float lifetime;
-    Animator animator;
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
-
+    public Animator animator;
     public void ActivateProjectile()
     {
-
         lifetime = 0;
         gameObject.SetActive(true);
     }
@@ -28,7 +21,17 @@ public class Projectile : MonoBehaviour
         lifetime += Time.deltaTime;
         if (lifetime > resetTime)
             gameObject.SetActive(false);
+        animator.SetTrigger("exp");
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Ground")
+        {
+            gameObject.SetActive(false);
+            animator.SetTrigger("exp");
+
+
+        }
+    }
 }
