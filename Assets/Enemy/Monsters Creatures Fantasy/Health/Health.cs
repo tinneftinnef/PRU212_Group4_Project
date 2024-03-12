@@ -5,7 +5,9 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
-    private float currentHealth;
+    public float currentHealth;
+    
+
     public HealthBar healthBar;
     public Animator animator;
     private bool dead;
@@ -13,12 +15,18 @@ public class Health : MonoBehaviour
     public GameObject Blood;
     public GameObject Mana;
 
-    private int bloodManaDropChance = 2;
+    public int bloodManaDropChance = 2;
     private void Awake()
     {
         currentHealth = startingHealth;
         healthBar.SetMaxHealth(startingHealth);
+        animator = GetComponent<Animator>();
 
+    }
+    public IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
     }
     public void TakeDamage(float _damage)
     {
@@ -35,7 +43,13 @@ public class Health : MonoBehaviour
             {
                 //player die
                 animator.SetTrigger("die");
+               animator.SetBool("isAlive", true);
                 GetComponent<Skeleton>().enabled = false;
+
+                GetComponent<AIController>().enabled = false;
+                StartCoroutine(DestroyAfterDelay(10f));
+
+
                 dead = true;
                 GameObject coin = Instantiate(Coin, transform.position, Quaternion.identity);
                 coin.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;

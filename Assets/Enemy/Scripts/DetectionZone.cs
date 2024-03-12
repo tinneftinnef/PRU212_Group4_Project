@@ -5,6 +5,7 @@ using UnityEngine;
 public class DetectionZone : MonoBehaviour
     
 {
+    public GameObject player;
     Collider2D col;
     public List<Collider2D> detectedColliders = new List<Collider2D>();
     private void Awake()
@@ -24,7 +25,10 @@ public class DetectionZone : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        detectedColliders.Add(collision);
+        if (collision.gameObject == player)
+        {
+            detectedColliders.Add(collision);
+        }
 
     }
     private void OnTriggerExit2D(Collider2D collision)
