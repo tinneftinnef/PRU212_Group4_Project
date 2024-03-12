@@ -11,6 +11,7 @@ public class ParalaxScript : MonoBehaviour
     private Vector3 lastCameraPosition;
     private float textureUniSizeX;
     private float textureUniSizeY;
+    [SerializeField] float offsetY;
     void Start()
     {
         cameraTransform = Camera.main.transform;

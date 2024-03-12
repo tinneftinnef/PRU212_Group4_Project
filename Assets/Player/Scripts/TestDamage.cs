@@ -10,6 +10,7 @@ public class TestDamage : MonoBehaviour
     void Start()
     {
         damage = 10f;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Information>();
     }
 
     // Update is called once per frame

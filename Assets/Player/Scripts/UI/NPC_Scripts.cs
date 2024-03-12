@@ -13,15 +13,16 @@ public class NPC_Scripts : MonoBehaviour
     public GameObject continueButton;
     public float wordSpeed;
     public bool playerIsClose;
+    public GameObject InteractPanel;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             if (dialogPanel.activeInHierarchy)
             {
@@ -33,10 +34,11 @@ public class NPC_Scripts : MonoBehaviour
                 StartCoroutine(Typing());
             }
         }
-        if(dialogText.text == dialog[index])
+        if (dialogText.text == dialog[index])
         {
             continueButton.SetActive(true);
         }
+        InteractTextInRange();
     }
     public void zeroText()
     {
@@ -49,12 +51,13 @@ public class NPC_Scripts : MonoBehaviour
     {
         Debug.Log("Clicked");
         continueButton.SetActive(false);
-        if(index < dialog.Length - 1)
+        if (index < dialog.Length - 1)
         {
             index++;
             dialogText.text = "";
             StartCoroutine(Typing());
-        } else
+        }
+        else
         {
             zeroText();
         }
@@ -81,6 +84,18 @@ public class NPC_Scripts : MonoBehaviour
         {
             playerIsClose = false;
             zeroText();
+        }
+    }
+
+    public void InteractTextInRange()
+    {
+        if (playerIsClose)
+        {
+            InteractPanel.SetActive(true);
+        }
+        else if (!playerIsClose)
+        {
+            InteractPanel.SetActive(false);
         }
     }
 }
