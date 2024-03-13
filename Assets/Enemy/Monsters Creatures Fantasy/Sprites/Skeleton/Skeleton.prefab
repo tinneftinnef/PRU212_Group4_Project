@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a087f337b53e4864c85d77beb53f3463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 844091340433223971, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
   flip: 0
   speed: 1
 --- !u!95 &3813857798413240887
@@ -216,6 +216,8 @@ MonoBehaviour:
   animator: {fileID: 3813857798413240887}
   attackZone: {fileID: 2348997844971947112}
   _target: 0
+  attackDamage: 0
+  attackRate: 1
   isAlive: 0
 --- !u!114 &2861872274737092265
 MonoBehaviour:
