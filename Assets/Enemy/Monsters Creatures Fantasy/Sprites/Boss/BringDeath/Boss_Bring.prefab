@@ -281,6 +281,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &4422327507441750468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6013938113493700409}
+  m_Layer: 0
+  m_Name: spellpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6013938113493700409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4422327507441750468}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.798, y: 0.034, z: 0}
+  m_LocalScale: {x: 9, y: 9, z: 9}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5758484590272369101}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7706088334498052540
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +403,8 @@ GameObject:
   - component: {fileID: 8866291733928757704}
   - component: {fileID: 8999852951840377348}
   - component: {fileID: 3545393681940503331}
+  - component: {fileID: 2524245752018856}
+  - component: {fileID: 1186781886365451603}
   m_Layer: 8
   m_Name: Boss_Bring
   m_TagString: Enemy
@@ -387,13 +420,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7776311036985430265}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4553375, y: -2.0072114, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.278656, y: 0.09743881, z: -0.03263144}
   m_LocalScale: {x: -5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 514275620241957495}
   - {fileID: 538149789626364102}
+  - {fileID: 6013938113493700409}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3200755232277471232
@@ -548,7 +582,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7776311036985430265}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cd128290e91f8149b6edd430a2af9b1, type: 3}
   m_Name: 
@@ -574,7 +608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 2
-  range: 1.14
+  range: 0.81
   colliderDistance: -0.18
   damage: 1
   boxCollider: {fileID: 8526116553937870443}
@@ -593,5 +627,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4395bb6e190c04f8d306c3ed0945a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 8287427629079713967, guid: 477f8a36f5cc90b45ae1e8d3ddf1e348, type: 3}
   flip: 1
+--- !u!114 &2524245752018856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7776311036985430265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c730d17826c5354faa734ab2dbec802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 5
+  range: 0.76
+  colliderDistance: -1.32
+  spellpoint: {fileID: 6013938113493700409}
+  spell:
+  - {fileID: 4472285348781296044, guid: 266bc2d2c6358bb4288387d17c9542e6, type: 3}
+  - {fileID: 4472285348781296044, guid: 266bc2d2c6358bb4288387d17c9542e6, type: 3}
+  - {fileID: 4472285348781296044, guid: 266bc2d2c6358bb4288387d17c9542e6, type: 3}
+  damage: 10
+  boxCollider: {fileID: 8526116553937870443}
+  playLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &1186781886365451603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7776311036985430265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2493bc14c43b43342b144aa768a32dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 500
+  currentHealth: 0
+  healthBar: {fileID: 1434550825228009846}
+  animator: {fileID: 1786790947430205842}
+  Coin: {fileID: 4996543614587308656, guid: dacf38692f70cbe4c987500cf2ad555e, type: 3}
+  Blood: {fileID: 3945967678679968875, guid: 57da130ca115362409e24344261ef8e7, type: 3}
+  Mana: {fileID: 2155881794992870873, guid: 82d0d440426f2f14aa1b6b6ff38048c7, type: 3}
+  bloodManaDropChance: 2
