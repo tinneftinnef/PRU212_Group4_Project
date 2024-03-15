@@ -7,7 +7,7 @@ public class Spawm : MonoBehaviour
     public List<GameObject> enemyList; // List để lưu trữ các enemy
     public GameObject spawnPoint1; // Vị trí spawn 1
     public GameObject spawnPoint2; // Vị trí spawn 2
-
+    [SerializeField] float timeSpawn;
     // Function để random enemy từ List
     private GameObject RandomEnemy()
     {
@@ -37,7 +37,7 @@ public class Spawm : MonoBehaviour
             GameObject randomEnemy = RandomEnemy();
             Transform randomSpawnPoint = RandomSpawnPoint();
             Instantiate(randomEnemy, randomSpawnPoint.position, Quaternion.identity);
-            yield return new WaitForSeconds(5); // Wait for 2 seconds
+            yield return new WaitForSeconds(timeSpawn); // Wait for 2 seconds
         }
     }
 

@@ -71,7 +71,7 @@ public class Player_Information : MonoBehaviour
         currentEP = maxEP;
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
-        this.player_coin = PlayerPrefs.GetInt("CoinEarn");
+        player_coin = PlayerPrefs.GetInt("CoinEarn");
         levelHP = PlayerPrefs.GetInt("LvHP");
         levelEP = PlayerPrefs.GetInt("LvEP");
         levelATK = PlayerPrefs.GetInt("LvATK");
@@ -254,5 +254,32 @@ public class Player_Information : MonoBehaviour
             KBCounter -= Time.deltaTime;
         }
     }
-
+    public void takeCoin(int coin)
+    {
+        player_coin += coin;
+    }
+    public void RegenMana(float mana)
+    {
+        if (currentEP + mana > maxEP)
+        {
+            currentEP = maxEP;
+        }
+        else
+        {
+            currentEP += mana;
+        }
+        epBar.fillAmount = currentEP / maxEP;
+    }
+    public void RegenHealth(float health)
+    {
+        if (currentHealth + health > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            currentHealth += health;
+        }
+        healthBar.fillAmount = currentHealth / maxHealth;
+    }
 }

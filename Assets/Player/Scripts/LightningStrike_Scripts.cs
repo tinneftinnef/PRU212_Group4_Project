@@ -5,7 +5,7 @@ using UnityEngine;
 public class LightningStrike_Scripts : MonoBehaviour
 {
     // Start is called before the first frame update
-    float damage = 50f;
+    float damage = 150f;
     void Start()
     {
         
@@ -21,8 +21,26 @@ public class LightningStrike_Scripts : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyTestTakeHit>().TakeDamage(damage);
-            Debug.Log("Hit!" + collision.name);
+            string enemyName = collision.name;
+            switch (enemyName)
+            {
+                case "Goblin(Clone)":
+                    Debug.Log("Goblin");
+                    collision.gameObject.GetComponent<HealthGoblin>().TakeDamage(damage);
+                    break;
+                case "Mushroom(Clone)":
+                    Debug.Log("Mushroom");
+                    collision.gameObject.GetComponent<HealthMushroom>().TakeDamage(damage);
+                    break;
+                case "Skeleton(Clone)":
+                    Debug.Log("Skeleton");
+                    collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+                    break;
+                case "Eye(Clone)":
+                    Debug.Log("Eye");
+                    collision.gameObject.GetComponent<HealthEye>().TakeDamage(damage);
+                    break;
+            }
         }
     }
 }

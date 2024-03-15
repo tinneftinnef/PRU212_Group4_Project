@@ -12,6 +12,10 @@ TagManager:
   - Audio
   - SkillFlame
   - Spike
+  - Ground
+  - Blood
+  - Mana
+  - Coin
   layers:
   - Default
   - TransparentFX

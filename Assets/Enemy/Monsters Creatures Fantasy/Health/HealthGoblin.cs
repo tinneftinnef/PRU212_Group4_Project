@@ -46,6 +46,7 @@ public class HealthGoblin : MonoBehaviour
                 animator.SetTrigger("die");
                 animator.SetBool("isAlive", true);
                 GetComponent<Goblin>().enabled = false;
+                GetComponent<BoxCollider2D>().enabled = false;
 
                 GetComponent<AIController>().enabled = false;
                 StartCoroutine(DestroyAfterDelay(10f));
@@ -79,11 +80,4 @@ public class HealthGoblin : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
-    }
 }

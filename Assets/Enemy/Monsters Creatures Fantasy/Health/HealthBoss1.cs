@@ -47,6 +47,7 @@ public class HealthBoss1 : MonoBehaviour
                 animator.SetBool("isAlive", true);
                 GetComponent<BossAtkRange>().enabled = false;
                 GetComponent<BossAtk>().enabled = false;
+                GetComponent<BoxCollider2D>().enabled = false;
 
                 GetComponent<AIControllerBoss>().enabled = false;
                 StartCoroutine(DestroyAfterDelay(10f));

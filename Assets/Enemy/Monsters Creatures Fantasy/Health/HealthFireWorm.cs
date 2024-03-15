@@ -47,6 +47,8 @@ public class HealthFireWorm : MonoBehaviour
                 animator.SetBool("isAlive", true);
                 GetComponent<BossAtkRange>().enabled = false;
                 GetComponent<AIControllerBoss>().enabled = false;
+                GetComponent<BoxCollider2D>().enabled = false;
+
                 StartCoroutine(DestroyAfterDelay(10f));
 
 

@@ -41,15 +41,51 @@ public class MeleeWeaponScripts : MonoBehaviour
                 if (information.listKSkill[i].activeSelf == true)
                 {
                     buff = true;
-                    float ampdmg = information.ATK * damageAmplified[i]/100;
-                    collision.gameObject.GetComponent<EnemyTestTakeHit>().TakeDamage(information.ATK + ampdmg);
-                    //Debug.Log($"Enemy take + {information.ATK + ampdmg}");
+                    float ampdmg = information.ATK * damageAmplified[i] / 100;
+                    string enemyName = collision.name;
+                    switch (enemyName)
+                    {
+                        case "Goblin(Clone)":
+                            Debug.Log("Goblin");
+                            collision.gameObject.GetComponent<HealthGoblin>().TakeDamage(information.ATK + ampdmg);
+                            break;
+                        case "Mushroom(Clone)":
+                            Debug.Log("Mushroom");
+                            collision.gameObject.GetComponent<HealthMushroom>().TakeDamage(information.ATK + ampdmg);
+                            break;
+                        case "Skeleton(Clone)":
+                            Debug.Log("Skeleton");
+                            collision.gameObject.GetComponent<Health>().TakeDamage(information.ATK + ampdmg);
+                            break;
+                        case "Eye(Clone)":
+                            Debug.Log("Eye");
+                            collision.gameObject.GetComponent<HealthEye>().TakeDamage(information.ATK + ampdmg);
+                            break;
+                    }
                 }
             }
-            if(buff == false)
+            if (buff == false)
             {
-                collision.gameObject.GetComponent<EnemyTestTakeHit>().TakeDamage(information.ATK);
-                //Debug.Log($"Enemy take + {information.ATK}");
+                string enemyName = collision.name;
+                switch (enemyName)
+                {
+                    case "Goblin(Clone)":
+                        Debug.Log("Goblin");
+                        collision.gameObject.GetComponent<HealthGoblin>().TakeDamage(information.ATK);
+                        break;
+                    case "Mushroom(Clone)":
+                        Debug.Log("Mushroom");
+                        collision.gameObject.GetComponent<HealthMushroom>().TakeDamage(information.ATK);
+                        break;
+                    case "Skeleton(Clone)":
+                        Debug.Log("Skeleton");
+                        collision.gameObject.GetComponent<Health>().TakeDamage(information.ATK);
+                        break;
+                    case "Eye(Clone)":
+                        Debug.Log("Eye");
+                        collision.gameObject.GetComponent<HealthEye>().TakeDamage(information.ATK);
+                        break;
+                }
             }
             switch (randomNumber)
             {

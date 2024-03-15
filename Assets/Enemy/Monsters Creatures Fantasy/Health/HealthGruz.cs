@@ -45,6 +45,8 @@ public class HealthGruz : MonoBehaviour
                 //player die
                 animator.SetTrigger("die");
                 animator.SetBool("isAlive", true);
+                GetComponent<BoxCollider2D>().enabled = false;
+
                 GetComponent<GruzMother>().enabled = false;
                 StartCoroutine(DestroyAfterDelay(10f));
 

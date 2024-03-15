@@ -11,6 +11,9 @@ public class Goblin : MonoBehaviour
     public float attackDamage;
     public float attackRate = 1.0f;
     private float cooldown;
+    [SerializeField] Player_Information player;
+    [SerializeField] Transform Zone;
+    [SerializeField] LayerMask playerLayer;
     public bool target
     {
         get { return _target; }
@@ -33,6 +36,7 @@ public class Goblin : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Information>();
     }
 
     // Update is called once per frame
@@ -42,7 +46,7 @@ public class Goblin : MonoBehaviour
 
         if (target && cooldown <= 0)
         {
-            Attack();
+            //Attack();
             cooldown = attackRate;
         }
 
@@ -50,9 +54,6 @@ public class Goblin : MonoBehaviour
         {
             cooldown -= Time.deltaTime;
         }
-
-
-
     }
     private void Attack()
     {
@@ -63,13 +64,24 @@ public class Goblin : MonoBehaviour
         {
             if (hitCollider.gameObject.CompareTag("Player"))
             {
-                Health playerHealth = hitCollider.gameObject.GetComponent<Health>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(attackDamage);
-                }
+                Debug.Log("Hit");
             }
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            player.KBCounter = player.KBTotalTime;
+            if (collision.transform.position.x <= transform.position.x)
+            {
+                player.knockFromRight = true;
+            }
+            if (collision.transform.position.x >= transform.position.x)
+            {
+                player.knockFromRight = false;
+            }
+            player.TakeDamage(attackDamage);
+        }
+    }
 }

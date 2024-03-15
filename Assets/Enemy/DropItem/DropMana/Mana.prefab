@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3566186860977839885}
   m_Layer: 0
   m_Name: Mana
-  m_TagString: Untagged
+  m_TagString: Mana
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 40
   m_Sprite: {fileID: 21300000, guid: b3e40c4806522f64bb5abc81505f1d10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

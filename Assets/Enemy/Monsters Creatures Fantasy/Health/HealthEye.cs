@@ -46,7 +46,7 @@ public class HealthEye : MonoBehaviour
                 animator.SetTrigger("die");
                 animator.SetBool("isAlive", true);
                 GetComponent<Eye>().enabled = false;
-
+                GetComponent<BoxCollider2D>().enabled = false;
                 GetComponent<FlyingEnemy>().enabled = false;
                 GetComponent<Rigidbody2D>().gravityScale = 1;
                 StartCoroutine(DestroyAfterDelay(10f));
@@ -78,11 +78,4 @@ public class HealthEye : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
-    }
 }
