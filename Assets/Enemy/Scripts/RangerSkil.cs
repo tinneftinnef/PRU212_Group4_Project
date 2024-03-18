@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -51,10 +51,22 @@ public class RangerSkil : MonoBehaviour
     private void rangeratk()
     {
         CooldownTimer = 0;
-        GameObject newSpell = Instantiate(spell[FindSpell()], spellpoint.position, Quaternion.identity);
+        GameObject newSpell = Instantiate(spell[FindSpell()], spellpoint.position, spellpoint.rotation);
+
         newSpell.SetActive(true);
+
+        // Lấy hướng nhìn của quái vật
+        Vector3 enemyDirection = transform.up;
+        if (transform.localScale.x < 0)
+            enemyDirection = -enemyDirection;
+
+        // Cập nhật hướng xoay của đạn
+        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, enemyDirection);
+        newSpell.transform.rotation = targetRotation;
+
         newSpell.GetComponent<ProjectileMove>().ActivateProjectile();
     }
+
     private int FindSpell()
     {
         for (int i = 0; i < spell.Length; i++)
