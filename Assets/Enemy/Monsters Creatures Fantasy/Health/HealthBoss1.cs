@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBoss1 : MonoBehaviour
 {
-    [SerializeField] private float startingHealth;
+    [SerializeField] public float startingHealth;
     public float currentHealth;
-
+    public int hitCount;
 
     public HealthBar healthBar;
     public Animator animator;
@@ -15,10 +16,15 @@ public class HealthBoss1 : MonoBehaviour
     public GameObject Blood;
     public GameObject Mana;
 
+
+
+    public GameObject healthPanel;
+    public Image bossHealth;
+    public Text bossHealthText;
     public int bloodManaDropChance = 2;
     private void Awake()
     {
-        currentHealth = startingHealth;
+        hitCount = 0;
         healthBar.SetMaxHealth(startingHealth);
         animator = GetComponent<Animator>();
 
@@ -28,47 +34,55 @@ public class HealthBoss1 : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Destroy(gameObject);
     }
+    public IEnumerator waitResetHurt(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        hitCount = 0;
+    }
     public void TakeDamage(float _damage)
     {
-        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        currentHealth -= _damage;
         healthBar.SetHealth(currentHealth);
+        bossHealth.fillAmount = currentHealth / startingHealth * PauseGame.increaseEnemyStats();
+        bossHealthText.text = currentHealth.ToString();
         if (currentHealth > 0)
         {
-            //player hurt
-            animator.SetTrigger("hurt");
+            hitCount++;
+            if (hitCount <= 3)
+            {
+                animator.SetTrigger("hurt");
+                animator.SetBool("canCast", false);
+                animator.SetBool("canHit", false);
+            }
+            else if (hitCount > 3)
+            {
+                animator.SetBool("canCast", true);
+                animator.SetBool("canHit", true);
+                StartCoroutine(waitResetHurt(2f));
+            }
+
 
         }
-        else
+        else if (currentHealth <= 0)
         {
             if (!dead)
             {
                 //player die
+                healthPanel.SetActive(false);
                 animator.SetTrigger("die");
-                animator.SetBool("isAlive", true);
-                GetComponent<BossAtkRange>().enabled = false;
-                GetComponent<BossAtk>().enabled = false;
-                GetComponent<BoxCollider2D>().enabled = false;
-
-                GetComponent<AIControllerBoss>().enabled = false;
-                StartCoroutine(DestroyAfterDelay(10f));
-
-
+                StartCoroutine(DestroyAfterDelay(1f));
+                PauseGame.hasSpawnedBoss = false;
                 dead = true;
-                GameObject coin = Instantiate(Coin, transform.position, Quaternion.identity);
-                coin.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
-
-                // Drop a blood or mana with 1 in 2 chance
-                if (Random.Range(0, bloodManaDropChance) == 0)
+                int random = Random.Range(5, 20);
+                for (int i = 0; i < random; i++)
                 {
+                    GameObject coin = Instantiate(Coin, transform.position, Quaternion.identity);
+                    coin.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
                     GameObject blood = Instantiate(Blood, transform.position, Quaternion.identity);
                     blood.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
-                }
-                else
-                {
                     GameObject mana = Instantiate(Mana, transform.position, Quaternion.identity);
                     mana.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
                 }
-
             }
 
 
@@ -77,15 +91,19 @@ public class HealthBoss1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentHealth = startingHealth * PauseGame.increaseEnemyStats();
+        bossHealth = GameObject.FindGameObjectWithTag("Boss").GetComponent<Image>();
+        healthPanel = GameObject.FindGameObjectWithTag("BossPanel");
+        bossHealthText = GameObject.FindGameObjectWithTag("BossText").GetComponent<Text>();
+        bossHealth.fillAmount = currentHealth / startingHealth;
+        bossHealthText.text = currentHealth.ToString();
+        
+    }
+    private void Update()
+    {
 
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(20);
-        }
-    }
+
 }

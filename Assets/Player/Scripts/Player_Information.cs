@@ -18,8 +18,9 @@ public class Player_Information : MonoBehaviour
     [SerializeField] public float currentEP;
     [SerializeField] Image epBar;
     [SerializeField] public float maxEP;
-    [SerializeField] public float ATK;
-
+    [SerializeField] public static float ATK;
+    [SerializeField] float startATK;
+    [SerializeField] bool isDead;
 
 
     [SerializeField] public int player_coin;
@@ -48,6 +49,9 @@ public class Player_Information : MonoBehaviour
     Rigidbody2D rb;
     //Enemy List
     [SerializeField] EnemyTestTakeHit takeHit;
+
+    Audio_Manager audioManager;
+
     //private static Player_Information instance;
     //public static Player_Information Instance
     //{
@@ -63,22 +67,23 @@ public class Player_Information : MonoBehaviour
     private void Awake()
     {
         isCanUseSkillK = false;
-        ATK = 10;
+        ATK = PlayerPrefs.GetFloat("ATK") + 30f;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<Audio_Manager>();
     }
     void Start()
     {
         currentHealth = maxHealth;
         currentEP = maxEP;
+        startATK = 30f;
         animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         player_coin = PlayerPrefs.GetInt("CoinEarn");
         levelHP = PlayerPrefs.GetInt("LvHP");
         levelEP = PlayerPrefs.GetInt("LvEP");
         levelATK = PlayerPrefs.GetInt("LvATK");
-
+        isDead = false;
         currentHealth = maxHealth = PlayerPrefs.GetFloat("Health");
         currentEP = maxEP = PlayerPrefs.GetFloat("EP");
-        ATK = PlayerPrefs.GetFloat("ATK");
         if (PlayerPrefs.GetInt("KUnlock") == 1)
         {
             isCanUseSkillK = true;
@@ -94,6 +99,10 @@ public class Player_Information : MonoBehaviour
         bindingText();
         checkActiveSKill();
         PlayerPrefs.SetInt("CoinEarn", player_coin);
+        if(isDead)
+        {
+            StartCoroutine(DestroyAfterDelay(2f));
+        }
     }
     public void bindingText()
     {
@@ -212,15 +221,24 @@ public class Player_Information : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        if(healthBar != null)
+        audioManager.PlaySFX(audioManager.hurt);
+        if (healthBar != null)
         {
             healthBar.fillAmount = currentHealth / maxHealth;
         }
         if(currentHealth <= 0)
         {
+            isDead = true;
+            audioManager.PlaySFX(audioManager.dead);
             animator.SetBool("IsDead", true);
-            SceneManager.LoadScene("EndGame");
+            gameObject.GetComponent<Player_Movement>().enabled = false;
+            //SceneManager.LoadScene("EndGame");
         }
+    }
+    public IEnumerator DestroyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("EndGame");
     }
     public void useAbility(float mana)
     {

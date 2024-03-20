@@ -24,18 +24,19 @@ public class RangerSkil : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        controller = GetComponent<AIControllerBoss>();
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        damage = 50f * PauseGame.increaseEnemyStats();
     }
 
     // Update is called once per frame
     void Update()
     {
         CooldownTimer += Time.deltaTime;
-        if (PlayInSight())
+        if (checkInAttackRange.isInSpellRange)
         {
             if (CooldownTimer >= attackCooldown)
             {
@@ -45,7 +46,6 @@ public class RangerSkil : MonoBehaviour
                 rangeratk();
 
             }
-
         }
     }
     private void rangeratk()
@@ -63,21 +63,5 @@ public class RangerSkil : MonoBehaviour
                 return i;
         }
         return 0;
-    }
-    private bool PlayInSight()
-    {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance, new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z), 0, Vector2.left, 0, playLayer);
-        if (hit.collider != null)
-        {
-            AIControllerBoss.speed = 0;
-            animator.SetBool("canmove", true);
-        }
-
-        return hit.collider != null;
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance, new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 }

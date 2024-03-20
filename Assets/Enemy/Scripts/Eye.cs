@@ -8,6 +8,7 @@ public class Eye : MonoBehaviour
     public DetectionZone attackZone;
     public bool _target = false;
     private bool dead;
+    [SerializeField] Player_Information player;
     public bool target
     {
         get { return _target; }
@@ -31,17 +32,17 @@ public class Eye : MonoBehaviour
 
     private void Start()
     {
-        cooldown = attackRate;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Information>();
+        attackDamage = 50f * PauseGame.increaseEnemyStats();
     }
 
     // Update is called once per frame
     void Update()
     {
-        target = attackZone.detectedColliders.Count > 0;
-
+        //target = attackZone.detectedColliders.Count > 0;
+        target = attackZone.IsDetected();
         if (target &&  cooldown <= 0)
         {
-            Attack();
             cooldown = attackRate;
         }
 
@@ -53,21 +54,20 @@ public class Eye : MonoBehaviour
       
     }
 
-    private void Attack()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-      
-        Collider2D[] hitColliders = attackZone.GetComponents<Collider2D>();
-
-        foreach (Collider2D hitCollider in hitColliders)
+        if (collision.CompareTag("Player"))
         {
-            if (hitCollider.gameObject.CompareTag("Player"))
+            player.KBCounter = player.KBTotalTime;
+            if (player.transform.position.x <= transform.position.x)
             {
-                Health playerHealth = hitCollider.gameObject.GetComponent<Health>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(attackDamage);
-                }
+                player.knockFromRight = true;
             }
+            if (player.transform.position.x >= transform.position.x)
+            {
+                player.knockFromRight = false;
+            }
+            player.TakeDamage(attackDamage);
         }
     }
 }

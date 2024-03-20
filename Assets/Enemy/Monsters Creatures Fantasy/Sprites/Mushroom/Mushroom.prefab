@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 236814636642840001}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.714005, y: 0.04249996, z: 0}
+  m_LocalPosition: {x: 0.132, y: -0.04, z: 0}
   m_LocalScale: {x: 1.0255, y: 0.866, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40,7 +40,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236814636642840001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -65,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.5099182, y: -0.13665204}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26425934, y: 0.40435567}
+  m_Size: {x: 0.5, y: 0.7}
   m_EdgeRadius: 0
 --- !u!114 &6660299423255647873
 MonoBehaviour:
@@ -90,8 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999d78d24d98e1f438e2c8f49aa5a022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  detectedColliders: []
+  detectPosition: {fileID: 6448501044486231193}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2076359969452898573
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +423,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.019745111, y: -0.06640917}
@@ -470,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a087f337b53e4864c85d77beb53f3463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 844091340433223971, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
+  player: {fileID: 527222793984665972, guid: dad75aa17449fda48901fbf8cdbe05d4, type: 3}
   flip: 0
   speed: 1
 --- !u!114 &4877850892184013121
@@ -508,8 +510,9 @@ MonoBehaviour:
   animator: {fileID: 2437060209755802809}
   attackZone: {fileID: 6660299423255647873}
   _target: 0
-  attackDamage: 0
-  attackRate: 1
+  attackDamage: 30
+  attackRate: 3
+  player: {fileID: 0}
   isAlive: 0
   health: {fileID: 0}
 --- !u!114 &6622815839661853667

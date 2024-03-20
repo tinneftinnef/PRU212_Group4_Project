@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     public int bloodManaDropChance = 2;
     private void Awake()
     {
-        currentHealth = startingHealth;
+        
         healthBar.SetMaxHealth(startingHealth);
         animator = GetComponent<Animator>();
 
@@ -43,20 +43,15 @@ public class Health : MonoBehaviour
             {
                 //player die
                 animator.SetTrigger("die");
-               animator.SetBool("isAlive", true);
-                GetComponent<Skeleton>().enabled = false;
-                GetComponent<BoxCollider2D>().enabled = false;
-
-                GetComponent<AIController>().enabled = false;
-                StartCoroutine(DestroyAfterDelay(10f));
-
-
+                StartCoroutine(DestroyAfterDelay(2f));
+                AIController aIController = GetComponent<AIController>();
+                aIController.enabled = false;
                 dead = true;
                 GameObject coin = Instantiate(Coin, transform.position, Quaternion.identity);
                 coin.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
 
                 // Drop a blood or mana with 1 in 2 chance
-                if (Random.Range(0, bloodManaDropChance) == 0)
+                if (Random.Range(0, 3) == 0)
                 {
                     GameObject blood = Instantiate(Blood, transform.position, Quaternion.identity);
                     blood.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
@@ -75,7 +70,7 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = startingHealth * PauseGame.increaseEnemyStats();
     }
 
     // Update is called once per frame

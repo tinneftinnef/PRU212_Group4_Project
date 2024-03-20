@@ -22,7 +22,7 @@ public class SpawnData : MonoBehaviour
         
         player_Infor.currentHealth = player_Infor.maxHealth = PlayerPrefs.GetFloat("Health");
         player_Infor.currentEP = player_Infor.maxEP = PlayerPrefs.GetFloat("EP");
-        player_Infor.ATK = PlayerPrefs.GetFloat("ATK");
+        Player_Information.ATK = PlayerPrefs.GetFloat("ATK");
         if(PlayerPrefs.GetInt("KUnlock") == 1)
         {
             player_Infor.isCanUseSkillK = true;

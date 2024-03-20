@@ -6,7 +6,7 @@ public class DropCoin : MonoBehaviour
 {
     public int minValue = 0;
     public int maxValue = 100;
-    private int value;
+    public static int value;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -39,7 +39,7 @@ public class FlyingEnemy : MonoBehaviour
         else
         {
             animator.SetBool("canmove", false);
-
+            Speed = 3;
         }
     }
     private void Chase()

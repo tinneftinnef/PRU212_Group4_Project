@@ -5,10 +5,10 @@ using UnityEngine;
 public class LightningStrike_Scripts : MonoBehaviour
 {
     // Start is called before the first frame update
-    float damage = 150f;
+    float damage ;
     void Start()
     {
-        
+        damage = 150f + Player_Information.ATK;
     }
 
     // Update is called once per frame
@@ -25,22 +25,28 @@ public class LightningStrike_Scripts : MonoBehaviour
             switch (enemyName)
             {
                 case "Goblin(Clone)":
-                    Debug.Log("Goblin");
                     collision.gameObject.GetComponent<HealthGoblin>().TakeDamage(damage);
                     break;
                 case "Mushroom(Clone)":
-                    Debug.Log("Mushroom");
                     collision.gameObject.GetComponent<HealthMushroom>().TakeDamage(damage);
                     break;
                 case "Skeleton(Clone)":
-                    Debug.Log("Skeleton");
                     collision.gameObject.GetComponent<Health>().TakeDamage(damage);
                     break;
                 case "Eye(Clone)":
-                    Debug.Log("Eye");
                     collision.gameObject.GetComponent<HealthEye>().TakeDamage(damage);
                     break;
+                case "Boss_Bring(Clone)":
+                    collision.gameObject.GetComponent<HealthBoss1>().TakeDamage(damage);
+                    break;
+                case "FireWorm(Clone)":
+                    collision.gameObject.GetComponent<HealthFireWorm>().TakeDamage(damage);
+                    break;
             }
+        }
+        if (collision.CompareTag("GruzMother"))
+        {
+            collision.gameObject.GetComponent<HealthGruz>().TakeDamage(damage);
         }
     }
 }

@@ -54,7 +54,7 @@ public class GruzMother : MonoBehaviour
         isTouchingWall = Physics2D.OverlapCircle(goundCheckWall.position, groundCheckRadius, groundLayer);
     }
 
-    void RandomStatePicker()
+     public void RandomStatePicker()
     {
         int randomState = Random.Range(0, 2);
         if (randomState == 0)
@@ -142,7 +142,7 @@ public class GruzMother : MonoBehaviour
         }
     }
 
-    void FlipTowardsPlayer()
+    public void FlipTowardsPlayer()
     {
         float playerDirection = player.position.x - transform.position.x;
 

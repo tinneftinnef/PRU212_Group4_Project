@@ -26,7 +26,7 @@ public class Goblin : MonoBehaviour
 
     public bool isAlive;
 
- 
+
 
     private void Awake()
     {
@@ -37,16 +37,16 @@ public class Goblin : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Information>();
+        attackDamage = 50f * PauseGame.increaseEnemyStats();
     }
 
     // Update is called once per frame
     void Update()
     {
-        target = attackZone.detectedColliders.Count > 0;
-
+        //target = attackZone.detectedColliders.Count > 0;
+        target = attackZone.IsDetected();
         if (target && cooldown <= 0)
         {
-            //Attack();
             cooldown = attackRate;
         }
 
@@ -55,29 +55,16 @@ public class Goblin : MonoBehaviour
             cooldown -= Time.deltaTime;
         }
     }
-    private void Attack()
-    {
-
-        Collider2D[] hitColliders = attackZone.GetComponents<Collider2D>();
-
-        foreach (Collider2D hitCollider in hitColliders)
-        {
-            if (hitCollider.gameObject.CompareTag("Player"))
-            {
-                Debug.Log("Hit");
-            }
-        }
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             player.KBCounter = player.KBTotalTime;
-            if (collision.transform.position.x <= transform.position.x)
+            if (player.transform.position.x <= transform.position.x)
             {
                 player.knockFromRight = true;
             }
-            if (collision.transform.position.x >= transform.position.x)
+            if (player.transform.position.x >= transform.position.x)
             {
                 player.knockFromRight = false;
             }

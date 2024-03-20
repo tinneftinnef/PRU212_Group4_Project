@@ -18,6 +18,7 @@ public class SwitchSence : MonoBehaviour
     }
     public void StartGame(string sceneName)
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(sceneName);
     }
     public void QuitGame()

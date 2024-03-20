@@ -16,6 +16,12 @@ TagManager:
   - Blood
   - Mana
   - Coin
+  - CheckMove
+  - GruzMother
+  - Spawn
+  - Boss
+  - BossPanel
+  - BossText
   layers:
   - Default
   - TransparentFX
