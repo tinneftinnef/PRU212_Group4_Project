@@ -11,6 +11,9 @@ public class Goblin : MonoBehaviour
     public float attackDamage;
     public float attackRate = 1.0f;
     private float cooldown;
+    [SerializeField] Player_Information player;
+    [SerializeField] Transform Zone;
+    [SerializeField] LayerMask playerLayer;
     public bool target
     {
         get { return _target; }
@@ -23,7 +26,7 @@ public class Goblin : MonoBehaviour
 
     public bool isAlive;
 
- 
+
 
     private void Awake()
     {
@@ -33,16 +36,17 @@ public class Goblin : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Information>();
+        attackDamage = 50f * PauseGame.increaseEnemyStats();
     }
 
     // Update is called once per frame
     void Update()
     {
-        target = attackZone.detectedColliders.Count > 0;
-
+        //target = attackZone.detectedColliders.Count > 0;
+        target = attackZone.IsDetected();
         if (target && cooldown <= 0)
         {
-            Attack();
             cooldown = attackRate;
         }
 
@@ -50,26 +54,21 @@ public class Goblin : MonoBehaviour
         {
             cooldown -= Time.deltaTime;
         }
-
-
-
     }
-    private void Attack()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        Collider2D[] hitColliders = attackZone.GetComponents<Collider2D>();
-
-        foreach (Collider2D hitCollider in hitColliders)
+        if (collision.CompareTag("Player"))
         {
-            if (hitCollider.gameObject.CompareTag("Player"))
+            player.KBCounter = player.KBTotalTime;
+            if (player.transform.position.x <= transform.position.x)
             {
-                Health playerHealth = hitCollider.gameObject.GetComponent<Health>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(attackDamage);
-                }
+                player.knockFromRight = true;
             }
+            if (player.transform.position.x >= transform.position.x)
+            {
+                player.knockFromRight = false;
+            }
+            player.TakeDamage(attackDamage);
         }
     }
-
 }

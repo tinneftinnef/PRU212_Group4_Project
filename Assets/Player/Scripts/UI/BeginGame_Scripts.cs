@@ -12,6 +12,7 @@ public class BeginGame_Scripts : MonoBehaviour
     public Player_Information Player_Information;
     public GameObject[] buffedSkill;
     public Player_Movement Player_Movement;
+    public GameObject interactPanel;
     void Start()
     {
 
@@ -24,6 +25,14 @@ public class BeginGame_Scripts : MonoBehaviour
     }
     private void ChangeMap()
     {
+        if (playerIsClose)
+        {
+            interactPanel.SetActive(true);
+        }
+        else if (!playerIsClose)
+        {
+            interactPanel.SetActive(false);
+        }
         if (playerIsClose && Input.GetKeyDown(KeyCode.E))
         {
             beginPanel.SetActive(true);
@@ -53,7 +62,7 @@ public class BeginGame_Scripts : MonoBehaviour
         PlayerPrefs.SetInt("LvEP", Player_Information.levelEP);
         PlayerPrefs.SetInt("LvATK", Player_Information.levelATK);
         PlayerPrefs.SetInt("SelectedSkillQ", Player_Movement.selectedSkill);
-        
+
         int randomNumber = Random.Range(1, 3);
         switch (randomNumber)
         {

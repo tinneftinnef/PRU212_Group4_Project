@@ -12,6 +12,8 @@ public class Audio_Manager : MonoBehaviour
     public AudioClip slashHitted2;
     public AudioClip slashHitted3;
     public AudioClip jump;
+    public AudioClip hurt;
+    public AudioClip dead;
     void Start()
     {
         musicSource.clip = background;

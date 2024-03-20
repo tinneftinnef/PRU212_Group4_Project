@@ -12,6 +12,16 @@ TagManager:
   - Audio
   - SkillFlame
   - Spike
+  - Ground
+  - Blood
+  - Mana
+  - Coin
+  - CheckMove
+  - GruzMother
+  - Spawn
+  - Boss
+  - BossPanel
+  - BossText
   layers:
   - Default
   - TransparentFX

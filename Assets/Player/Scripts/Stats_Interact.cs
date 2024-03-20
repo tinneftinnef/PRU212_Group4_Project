@@ -12,6 +12,7 @@ public class Stats_Interact : MonoBehaviour
     public GameObject plusATKButton;
     public GameObject plusEPButton;
     public GameObject closeButton;
+    public GameObject interactPanel;
     public bool playerIsClose;
     public GameObject dropdownKButton;
     public GameObject dropdownQButton;
@@ -46,6 +47,14 @@ public class Stats_Interact : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerIsClose)
+        {
+            interactPanel.SetActive(true);
+        }
+        else if (!playerIsClose)
+        {
+            interactPanel.SetActive(false);
+        }
         if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
         {
             if (statsPanel.activeInHierarchy)
@@ -74,7 +83,7 @@ public class Stats_Interact : MonoBehaviour
     }
     public void AddATK()
     {
-        player_Information.ATK += 20;
+        Player_Information.ATK += 20;
     }
     public void AddEP()
     {

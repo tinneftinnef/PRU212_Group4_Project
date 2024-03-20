@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour
 {
-    public GameObject player;
+    public Transform player;
     public bool flip;
     public float speed;
     private Animator animator;
@@ -19,6 +19,10 @@ public class AIController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
     void Update()
     {
@@ -42,6 +46,7 @@ public class AIController : MonoBehaviour
         }
         else
         {
+            speed = 2;
             animator.SetBool("canmove", false);
 
         }

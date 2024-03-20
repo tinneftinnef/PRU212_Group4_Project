@@ -12,13 +12,17 @@ public class Skeleton : MonoBehaviour
     public float attackDamage;
     public float attackRate = 1.0f;
     private float cooldown;
-
+    [SerializeField] Player_Information player;
     public bool isAlive;
-    public bool target { get { return _target; } private set
+    public bool target
+    {
+        get { return _target; }
+        private set
         {
-_target = value;
+            _target = value;
             animator.SetBool(AnimationStrings.target, _target);
-        } }
+        }
+    }
 
     public bool dead { get; private set; }
 
@@ -29,16 +33,16 @@ _target = value;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Information>();
+        attackDamage = 50f * PauseGame.increaseEnemyStats();
     }
 
     // Update is called once per frame
     void Update()
     {
-        target = attackZone.detectedColliders.Count > 0;
+        target = attackZone.IsDetected();
         if (target && cooldown <= 0)
         {
-            Attack();
             cooldown = attackRate;
         }
 
@@ -47,32 +51,20 @@ _target = value;
             cooldown -= Time.deltaTime;
         }
     }
-    //private void FixedUpdate()
-    //{
-    //    animator.GetBool("isAlive");
-    //    if (isAlive)
-    //    {
-
-    //        GetComponent<Skeleton>().enabled = false;
-    //        GetComponent<AIController>().enabled = false;
-    //    }
-    //    dead = true;
-    //}
-    private void Attack()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        Collider2D[] hitColliders = attackZone.GetComponents<Collider2D>();
-
-        foreach (Collider2D hitCollider in hitColliders)
+        if (collision.CompareTag("Player"))
         {
-            if (hitCollider.gameObject.CompareTag("Player"))
+            player.KBCounter = player.KBTotalTime;
+            if (player.transform.position.x <= transform.position.x)
             {
-                Health playerHealth = hitCollider.gameObject.GetComponent<Health>();
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(attackDamage);
-                }
+                player.knockFromRight = true;
             }
+            if (player.transform.position.x >= transform.position.x)
+            {
+                player.knockFromRight = false;
+            }
+            player.TakeDamage(attackDamage);
         }
     }
 }

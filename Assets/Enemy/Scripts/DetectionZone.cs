@@ -5,34 +5,11 @@ using UnityEngine;
 public class DetectionZone : MonoBehaviour
     
 {
-    public GameObject player;
-    Collider2D col;
-    public List<Collider2D> detectedColliders = new List<Collider2D>();
-    private void Awake()
-    {
-        col = GetComponent<Collider2D>();
-    }
+    [SerializeField] Transform detectPosition;
+    [SerializeField] LayerMask playerLayer;
     // Start is called before the first frame update
-    void Start()
+    public bool IsDetected()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            detectedColliders.Add(collision);
-        }
-
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        detectedColliders.Remove(collision);
+        return Physics2D.OverlapBox(detectPosition.position, new Vector2(0.5f, 0.7f),0, playerLayer);
     }
 }
